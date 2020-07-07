@@ -1,7 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap');
 @media screen and (max-width: 950px) {
-    .video {
-        display: none;
+    #video {
+        display: none !important;
+    }
+    #bgPhoto {
+        background-image: url(img/bgHP.jpg);
+        background-repeat: none;
+        background-position: center;
+        background-position-y: -80px;
+        height: 100%;
+        width: 100%;
     }
     .container-main .logo-main {
         height: 48px !important;

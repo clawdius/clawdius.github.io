@@ -32,16 +32,10 @@
             <div class="drop-content" id="drop">
                 <a href="#profile">//Profile</a>
                 <a href="#">//Member</a>
-                <a href="#gallery">//Gallery</a>
+                <a href="gallery.html">//Gallery</a>
                 <a href="#">//Connect</a>
             </div>
         </li>
-    </div>
-
-    <!-- Modal buat Foto -->
-    <div id="modal">
-        <img class="modal-content" id="imgModal">
-        <div class="modal-text">(Click image to close)</div>
     </div>
 
     <div class="container-general" id="home">
@@ -114,49 +108,13 @@
         </div>
     </div>
 
-    <div class="container-general" id="gallery">
-        <div class="container-main" id="container-gallery">
-            <h1>GALLERY</h1>
-            <!-- <h2>(Click image to enlarge)</h2> -->
-            <div class="container-img">
-                <div class="row">
-                    <div class="content">
-                        <img src="img/g2.jpg" class="img" onclick="modal(this.src)">
-                    </div>
-                    <div class="content">
-                        <img src="img/g9.jpg" class="img" onclick="modal(this.src)">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="content">
-                        <img src="img/g5.jpg" class="img" onclick="modal(this.src)">
-                    </div>
-                    <div class="content">
-                        <img src="img/g3.jpg" class="img" onclick="modal(this.src)">
-                    </div>
-                    <!-- <div class="content">
-                        <img src="img/g1.jpg" class="img" onclick="modal(this.src)">
-                    </div> -->
-                </div>
-                <div class="row">
-                    <div class="content">
-                        <img src="img/g6.jpg" class="img" onclick="modal(this.src)">
-                    </div>
-                    <div class="content">
-                        <img src="img/g8.jpg" class="img" onclick="modal(this.src)">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div class="container-general" id="footer">
-        <!-- <div id="topnote">
+        <div id="topnote">
             <div class="footerContentTop">
                 <h1>BVNDITTRICK</h1>
-                <h6 style="font-style: italic;">Sold my soul to Lord Simyeong</h6>
+                <h6>Sold my soul to Lord Simyeong</h6>
             </div>
-        </div> -->
+        </div>
         <div id="footnote">
             <div class="footnoteContainer">
                 <div class="footerContentBot">
@@ -184,6 +142,12 @@
                         </div>
                     </a>
 
+                    <a href="https://www.facebook.com/BVNDITOfficial" target="_blank">
+                        <div class="footerLink">
+                            <h4>FACEBOOK</h4>
+                        </div>
+                    </a>
+
                     <a href="http://cafe.daum.net/MNH-BVNDIT" target="_blank">
                         <div class="footerLink">
                             <h4>MCAFE</h4>
@@ -198,25 +162,6 @@
 </body>
 
 
-
-<script>
-    // Ambil foto masukin ke modal
-    function modal(imgSelected) {
-        var modalLord = document.getElementById('modal');
-        var imgModal = document.getElementById('imgModal');
-        modalLord.style.display = 'flex';
-        modalLord.style.flexDirection = 'column';
-        imgModal.src = imgSelected;
-
-        if (document.documentElement.clientWidth > 950) {
-            var navbar = document.getElementById('navbar');
-            navbar.style.animation = 'fadeOut 0.5s'
-            navbar.onanimationend = () => {
-                navbar.style.display = 'none';
-            }
-        }
-    }
-</script>
 
 
 </html>

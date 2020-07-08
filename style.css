@@ -3,6 +3,9 @@
     #video {
         display: none !important;
     }
+    .background {
+        position: absolute !important;
+    }
     #bgPhoto {
         background-image: url(img/bgHP.jpg);
         background-repeat: none;
@@ -54,7 +57,7 @@
     }
     #profile-top {
         padding: 72px 0 40px 0 !important;
-        background-color: #16613a !important;
+        background-color: #115733 !important;
     }
     #album-photo {
         width: 250px !important;
@@ -93,7 +96,6 @@
         font-size: 32pt !important;
     }
     #gallery {
-        background-color: #114b2d !important;
         padding: 76px 0 0 0 !important;
     }
     #container-gallery {
@@ -106,17 +108,12 @@
     .container-img .content:hover {
         transform: none !important;
     }
-    #container-gallery h1 {
-        display: none;
-    }
-    #container-gallery h2 {
-        display: none;
-    }
     .modal-content {
         width: 100% !important;
     }
     #footnote {
         padding: 0 !important;
+        box-shadow: none !important;
     }
     .footnoteContainer {
         flex-direction: column-reverse !important;
@@ -514,7 +511,7 @@ iframe {
 /* GALLERY */
 
 #gallery {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 1);
     height: auto;
 }
 
@@ -538,7 +535,7 @@ iframe {
 #container-gallery {
     flex-direction: column;
     flex-wrap: wrap;
-    padding: 0 220px 64px 220px;
+    padding: 64px 220px 64px 220px;
 }
 
 .container-img,
@@ -624,11 +621,22 @@ iframe {
 
 #footer #topnote {
     background-color: #2e2e2e;
+    color: #e2e2e2;
+}
+
+#footer #topnote h1 {
+    font-weight: 300;
+    letter-spacing: 10px;
+}
+
+#footer #topnote h6 {
+    font-weight: 200;
+    letter-spacing: 2px;
 }
 
 #footer #footnote {
     background-color: #272727;
-    box-shadow: 0 -5px 15px 0 rgba(0, 0, 0, 0.4);
+    /* box-shadow: 0 -2px 15px 0 rgba(0, 0, 0, 0.4); */
 }
 
 #footer h1,

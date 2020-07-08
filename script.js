@@ -45,19 +45,6 @@ window.onload = function() {
             }
         };
 
-        // Close Modal
-        if (event.target.matches('#imgModal')) {
-            var modalLord = document.getElementById('modal');
-            modalLord.style.display = 'none';
-
-            if (document.documentElement.clientWidth > 950) {
-                var navbar = document.getElementById('navbar');
-                navbar.style.display = 'flex';
-                navbar.style.animation = 'fadeIn 0.5s'
-                navbar.onanimationend = () => {};
-            }
-        }
-
     };
 
     //Dynamic Scroll Content
@@ -94,19 +81,6 @@ window.onload = function() {
                     profiles.style.opacity = '0'
                 }
             };
-
-            if (scrollHeight >= 1600 || scrollHeightChrome >= 1600) {
-                gallery.style.animation = 'zoomQuotes 0.8s';
-                gallery.onanimationend = () => {
-                    gallery.style.opacity = '1'
-                }
-            } else {
-                gallery.style.animation = 'fadeOut 0.2s'
-                gallery.onanimationend = () => {
-                    gallery.style.opacity = '0'
-                }
-            };
-
 
         };
 

@@ -1,34 +1,7 @@
 {
     "folders": [
-		{
-			"path": "."
-		},
-		{
-			"path": "D:\\Programs\\Xampp\\htdocs\\[TUGASPRAKTIKUM]"
-		},
-		{
-			"path": "D:\\Programs\\Xampp\\htdocs\\BELAJAR\\pertOOP"
-		},
-		{
-			"path": "D:\\Programs\\Xampp\\htdocs\\MateriMySQLJquery"
-		},
-		{
-			"path": "D:\\Programs\\Xampp\\htdocs\\Inheritance"
-		},
-		{
-			"path": "D:\\Programs\\Xampp\\htdocs\\QUIZPRAKTIKUM2"
-		},
-		{
-			"path": "D:\\Programs\\Xampp\\htdocs\\MateriMySQL"
-		},
-		{
-			"path": "D:\\Programs\\Xampp\\htdocs\\[PRAKTIKUMMYSQL]"
-		},
-		{
-			"path": "D:\\Programs\\Xampp\\htdocs\\DASHBOARD v0.1"
-		}
-	],
-    "settings": {
-        "liveServer.settings.multiRootWorkspaceName": "bloodtusk25.github.io"
-    }
+        {
+            "path": "."
+        }
+    ]
 }

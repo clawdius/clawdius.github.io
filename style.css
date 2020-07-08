@@ -680,6 +680,27 @@ h6 {
 }
 
 
+/* LOADING MENU */
+
+#preload {
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    background-color: #0d3d25;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#preload h1 {
+    letter-spacing: 4px;
+    font-weight: 200;
+    color: #ffffff;
+    animation: epilepsy 1.1s linear infinite;
+}
+
+
 /* ANIMATION */
 
 @keyframes fadeIn {
@@ -750,6 +771,15 @@ h6 {
     100% {
         opacity: 1;
         transform: translateY(inherit)
+    }
+}
+
+@keyframes epilepsy {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
 

@@ -3,6 +3,7 @@ window.onload = function() {
     var contMain = document.getElementById('cont-main');
     var navbar = document.getElementById('navbar');
     var link = document.getElementById('cont-link');
+    var loader = document.getElementById('preload');
 
     contMain.style.opacity = '0';
     navbar.style.opacity = '0';
@@ -10,13 +11,17 @@ window.onload = function() {
 
     contMain.style.animation = 'zoom 1s';
 
-    contMain.onanimationend = () => {
-        contMain.style.opacity = '1';
-        navbar.style.animation = 'Turun 0.8s';
-        navbar.style.opacity = '1';
-        navbar.onanimationend = () => {
-            link.style.animation = 'menuAnimation 0.8s';
-            link.style.opacity = '1';
+    loader.style.animation = "fadeOut 0.5s";
+    loader.onanimationend = () => {
+        loader.style.display = 'none';
+        contMain.onanimationend = () => {
+            contMain.style.opacity = '1';
+            navbar.style.animation = 'Turun 0.8s';
+            navbar.style.opacity = '1';
+            navbar.onanimationend = () => {
+                link.style.animation = 'menuAnimation 0.8s';
+                link.style.opacity = '1';
+            }
         }
     }
 

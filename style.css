@@ -1,6 +1,7 @@
 /* Font */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @font-face {
     font-family: "Credit";
     src: url(media/creditva.ttf) format("truetype");
@@ -113,7 +114,7 @@ a {
 
 .sectionTitle {
     font-size: 86pt;
-    font-family: 'Bebas';
+    font-family: 'Bebas Neue';
     font-weight: normal;
     text-align: right;
     letter-spacing: 0;

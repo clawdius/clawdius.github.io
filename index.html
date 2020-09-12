@@ -4,169 +4,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BVNDITTRICK</title>
-    <link rel="shortcut icon" type="image/x-icon" href="img/favico.ico">
     <link rel="stylesheet" media="screen" href="style.css">
     <script src="script.js"></script>
+    <script src="noframework.waypoints.min.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="media/pics/favico.png">
+    <title>[-77.82 X -78.29]</title>
 </head>
 
 <body>
 
-    <div id="preload">
-        <h1>PLEASE WAIT</h1>
+    <div id='loading'>
+        <h1 style='color: white'></h1>
     </div>
 
-    <!-- Background Belakang -->
-    <div class="background">
-        <div id="bgPhoto"></div>
-        <div id="video">
-            <iframe src="https://www.youtube.com/embed/NQJgoA96fUY?autoplay=1&loop=1&showinfo=0&autohide=1&hd=1&playlist=NQJgoA96fUY&mute=1" allow='autoplay'>
-            </iframe>
-        </div>
+    <div class='container-inti' id='startPage'>
+        <img src="media/pics/everloglow white.png" style="height: 100px; z-index: 2">
+        <div style="font-family: credit; font-size: 48pt; z-index: 2">-77.82X-78.29</div>
+        <div style="font-family: roboto; font-size: 12pt; z-index: 2;">09 . 21</div>
     </div>
 
-    <!-- Navbar -->
-    <div class="navbar-container" id="navbar">
-        <li id="logo">
-            <a href="#home"><img src="img/logo.png" style="height: 24px;"></a>
-        </li>
-        <li>
-            <div class="nav-dropdown">
-                <img id="drop-btn" src="img/dropdown.svg">
-            </div>
-            <div class="drop-content" id="drop">
-                <a href="#profile">//Profile</a>
-                <a href="#">//Member</a>
-                <a href="gallery.html">//Gallery</a>
-                <a href="#">//Connect</a>
-            </div>
-        </li>
-    </div>
+    <div class='container-lord'>
 
-    <div class="container-general" id="home">
-        <div class="container-main noselect" id="cont-main">
-            <!-- <img src="img/logo.png" style="height:25px;width:auto;"> -->
-            <img src="img/logo-2.png" class="logo-main">
-            <h1>OUT NOW!</h1>
-            <div class="container-main" id="cont-link">
-                <div class="link">
-                    <a href="https://www.youtube.com/watch?v=-lqsGDqkl2c" target="_blank">
-                        <img src="img/youtube.png" class="logo-link"></a>
-                </div>
-                <div class="link">
-                    <a href="https://open.spotify.com/track/4QkJJgmHhD9HVz9gsnrS9j" target="_blank">
-                        <img src="img/spotify.png" class="logo-link">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container-general" id="quotes">
-        <h1 id='quotesText'>"We're the queen in jungle"</h1>
-    </div>
-
-    <div class="container-general" id="profile">
-        <div class="container-inside-profile" id="bothProfiles">
-            <div id="profile-top">
-                <div class="profile-content" id="profile-photo">
-                    <h1 id="album-Title">CARNIVAL</h1>
-                    <img src="img/album-profile.jpg" id="album-photo">
-                    <div id="profile-paragraph">
-                        <h2>
-                            BVNDIT 2nd Mini Album [Carnival] ‘Hocus Pocus’부터 ‘Cool’까지 1년간 뜨겁게 달려온 밴디트. 그동안 이뤄낸 성장과 흔들림 없이 추구해온 밴디트만의 고유 색채를 두 번째 미니앨범 [Carnival]을 통해 활짝 꽃 피운다.<br> 총 다섯 곡이 수록된 이번 앨범은 ‘카니발’이라는 단어의 의미처럼 다채롭고 자유로운 음악으로 완성되었다. <br> 타이틀곡 ‘JUNGLE’은
-                            거칠지만 아름다운 젊음의 자신감으로, 어떠한 위협적인 순간이 오더라도 나만의 목소리로 새로운 움직임을 만들겠다는 밴디트의 용기 있는 목표를 담아냈다.<br> [Carnival]에 수록된 음악 역시, 모두 거를 타선이 없다는 MNH엔터테인먼트의 확신을 느낄 수 있다.<br>
-                            <!-- <br>
-                        <br> 02. JUNGLE<br> 주조된 틀 안에서의 삶이 때로는 정글보다 위협적이고 거칠게 다가오는 순간이 있다. ‘다름’과 ‘틀림’의 의미가 교차되는 혼돈 속에서 나의 색을 담은 목소리와 새로운 움직임을 보여주고 싶다는 밴디트의 목표와 용기를 담은 곡이다. <br> 정글의 색과 온도를 머금은 로우파이한 브라스 룹과 함께 밴디트의 매력적인 목소리가 다채롭게 비트 위로 펼쳐진다. 코러스 파트부터 더해지는
-                        거친 워블 베이스와 신디사이저의 향연은 이 곡의 테마인 정글을 완벽하게 표현하고 있다.<br> -->
-                        </h2>
+        <div class='container-double' id='sidebar'>
+            <!-- <div class='container-progressBar'>
+                <div class='progressBar' id='progressJalan'></div>
+                <div class='progressBar' id='progressHollow'></div>
+            </div> -->
+            <div class='container-list'>
+                <div class='sidebarList'>
+                    <div class='lists'>
+                        <a href='#startPage'>
+                            <div style="width:100%; display:flex; align-items: center; flex-direction: row;">
+                                <img src="media/pics/everloglow white.png" style="height: 80px">
+                                <div style='font-family: credit; font-size: 20pt; letter-spacing: 2px;'>-77.82X-78.29</div>
+                            </div>
+                        </a>
                     </div>
-                </div>
-            </div>
-            <div id="profile-bot">
-                <div class="profile-content">
-                    <h1 id="track-Title">TRACK LIST</h1>
-                </div>
-                <div class="profile-content" id="tracklist">
-                    <div class="track-card">
-                        <h2>01. <span id="title">Carnival</span></h2>
-                        <h3>Composed by VINCENZO<br> Arranged by VINCENZO</h3>
+                    <div class='lists'>
+                        <div class='rectangleList'></div>
+                        <div class='listText' id='list1'>
+                            <a href='#concept1'>09.09 Concept Photo #1</a>
+                        </div>
                     </div>
-                    <div class="track-card">
-                        <h2>02. <span id="title">JUNGLE</span> <span id="title-small">TITLE</span></h2>
-                        <h3>Lyrics by MosPick<br> Composed by MosPick<br> Arranged by MosPick</h3>
+                    <div class='lists'>
+                        <div class='rectangleList'></div>
+                        <div class='listText' id='list2'>
+                            <a href='#concept2'>09.10 Concept Photo #2</a></div>
                     </div>
-                    <div class="track-card">
-                        <h2>03. <span id="title">Come and Get It</span></h2>
-                        <h3>Lyrics by 말보단 행동이지<br>Composed by Coach & Sendo<br> Arranged by Coach & Sendo</h3>
+                    <div class='lists'>
+                        <div class='rectangleList'></div>
+                        <div class='listText' id='list3'>
+                            <a href='#concept3'>09.11 Concept Photo #3</a>
+                        </div>
                     </div>
-                    <div class="track-card">
-                        <h2>04. <span id="title">Cool</span></h2>
-                        <h3>Lyrics by Anna Timgren, VINCENZO, Any Masingga, Fuxxy<br> Composed by Anna Timgren, VINCENZO, Any Masingga, Fuxxy<br> Arranged by Any Masingga, VINCENZO</h3>
+                    <div class='lists'>
+                        <div class='rectangleList'></div>
+                        <div class='listText' id='list4'>
+                            <a href='#track'>09.12 Track List</a></div>
                     </div>
-                    <div class="track-card">
-                        <h2>05. <span id="title">Children</span></h2>
-                        <h3>Lyrics by 말보단 행동이지<br> Composed by 말보단 행동이지<br> Arranged by 말보단 행동이지</h3>
+                    <div class='lists'>
+                        <div class='rectangleList'></div>
+                        <div class='listText' id='list5'>09.14 Special Present</div>
+                    </div>
+                    <div class='lists'>
+                        <div class='rectangleList'></div>
+                        <div class='listText' id='list6'>09.16 MV Teaser</div>
+                    </div>
+                    <div class='lists'>
+                        <div class='rectangleList'></div>
+                        <div class='listText' id='list7'>09.18 Highlight Medley</div>
+                    </div>
+                    <div class='lists'>
+                        <div class='rectangleList'></div>
+                        <div class='listText' id='list8'>09.20 Comeback Vlive</div>
+                    </div>
+                    <div class='lists'>
+                        <div class='rectangleList'></div>
+                        <div class='listText' id='list9'>09.21 Album & Official MV Release</div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="container-general" id="footer">
-        <div id="topnote">
-            <div class="footerContentTop">
-                <h1>BVNDITTRICK</h1>
-                <h6>Sold my soul to Lord Simyeong</h6>
-            </div>
-        </div>
-        <div id="footnote">
-            <div class="footnoteContainer">
-                <div class="footerContentBot">
-                    <p>06140 서울특별시 강남구 논현로98길 18(역삼동,영빌딩)<br> &emsp;&emsp;&ensp; (서울특별시 강남구 역삼동 670 영빌딩)<br> T I 02.6082.0552 F I 02.6082.0553<br> 사업자등록번호 | 230-81-09090<br>
-                        <span style="font-weight: 500; color: #b4b4b4">©Copyright MNH ENTERTAINMENT, 2020.</span>
-                    </p>
+        <div class='container-double' id='main'>
+
+            <div class='container-inti gallery' id='concept1'>
+                <div class='sectionTitle'>CONCEPT PHOTO #1</div>
+                <div class='row'>
+                    <img class='img' src="media/pics/concept1 1.jpg">
                 </div>
-                <div class="footerContentBot">
-
-                    <a href="https://www.instagram.com/bvndit_official/" target="_blank">
-                        <div class="footerLink">
-                            <h4>INSTAGRAM</h4>
-                        </div>
-                    </a>
-
-                    <a href="https://www.youtube.com/channel/UCNAIB6brZzCCe1QDXq0o7bQ" target="_blank">
-                        <div class="footerLink">
-                            <h4>YOUTUBE</h4>
-                        </div>
-                    </a>
-
-                    <a href="https://twitter.com/BVNDIT_official" target="_blank">
-                        <div class="footerLink">
-                            <h4>TWITTER</h4>
-                        </div>
-                    </a>
-
-                    <a href="https://www.facebook.com/BVNDITOfficial" target="_blank">
-                        <div class="footerLink">
-                            <h4>FACEBOOK</h4>
-                        </div>
-                    </a>
-
-                    <a href="http://cafe.daum.net/MNH-BVNDIT" target="_blank">
-                        <div class="footerLink">
-                            <h4>MCAFE</h4>
-                        </div>
-                    </a>
-
+                <div class='row'>
+                    <div>
+                        <img class='img' src="media/pics/concept1 2.jpg">
+                    </div>
+                    <div>
+                        <img class='img' src="media/pics/concept1 3.jpg">
+                    </div>
+                </div>
+                <div class='row'>
+                    <div><img class='img' src="media/pics/concept1 4.jpg"></div>
+                    <div><img class='img' src="media/pics/concept1 5.jpg"></div>
+                </div>
+                <div class='row'>
+                    <div><img class='img' src="media/pics/concept1 6.jpg"></div>
+                    <div><img class='img' src="media/pics/concept1 7.jpg"></div>
                 </div>
             </div>
+
+            <div class='container-inti gallery' id='concept2'>
+                <div class='sectionTitle'>CONCEPT PHOTO #2</div>
+                <div class='row'>
+                    <img class='img' src="media/pics/concept2 1.jpg">
+                </div>
+                <div class='row'>
+                    <div>
+                        <img class='img' src="media/pics/concept2 2.jpg">
+                    </div>
+                    <div>
+                        <img class='img' src="media/pics/concept2 3.jpg">
+                    </div>
+                </div>
+                <div class='row'>
+                    <div><img class='img' src="media/pics/concept2 4.jpg"></div>
+                    <div><img class='img' src="media/pics/concept2 5.jpg"></div>
+                </div>
+                <div class='row'>
+                    <div><img class='img' src="media/pics/concept2 6.jpg"></div>
+                    <div><img class='img' src="media/pics/concept2 7.jpg"></div>
+                </div>
+            </div>
+
+            <div class='container-inti gallery' id='concept3'>
+                <div class='sectionTitle'>CONCEPT PHOTO #3</div>
+                <!-- <div class='row'>
+                    <img class='img' src="media/pics/concept3 1.jpg">
+                </div> -->
+                <div class='row'>
+                    <div>
+                        <img class='img' src="media/pics/concept3 2.jpg">
+                    </div>
+                    <div>
+                        <img class='img' src="media/pics/concept3 3.jpg">
+                    </div>
+                </div>
+                <div class='row'>
+                    <div><img class='img' src="media/pics/concept3 4.jpg"></div>
+                    <div><img class='img' src="media/pics/concept3 5.jpg"></div>
+                </div>
+                <div class='row'>
+                    <div><img class='img' src="media/pics/concept3 6.jpg"></div>
+                    <div><img class='img' src="media/pics/concept3 7.jpg"></div>
+                </div>
+            </div>
+
+            <div class='container-inti' id='track'>
+                <div class='sectionTitle'>
+                    <p>TRACK</p>
+                    <p>LIST</p>
+                </div>
+                <div class='trackContainer'>
+                    <div class='trackContent'>
+                        <div class='title'>
+                            <div style="font-size: 14pt;">[TITLE]&nbsp;&nbsp;&nbsp;&nbsp;<span style='color:#ef3a6d'>1</span></div>
+                            <div>LA D<span style='color:#ef3a6d'>I</span> DA</div>
+                        </div>
+                        <!-- <div class='composer'>
+                            <div class='left'>COMPOSED BY</div>
+                            <div class='right'>
+                                <p>Hayley Aitken</p>
+                                <p>Olof Lindskog</p>
+                                <p>Gavin Jones</p>
+                                <p>72</p>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class='trackContent'>
+                        <div class='title'>
+                            <div style="font-size: 14pt;">2</div>
+                            <div>UNTOU<span style='color:#ef3a6d'>C</span>HABLE</div>
+                        </div>
+                        <!-- <div class='composer'>
+                            <div class='left'>COMPOSED BY</div>
+                            <div class='right'>
+                                <p>Hayley Aitken</p>
+                                <p>Olof Lindskog</p>
+                                <p>Gavin Jones</p>
+                                <p>72</p>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class='trackContent'>
+                        <div class='title'>
+                            <div style="font-size: 14pt;">3</div>
+                            <div>GxxD BO<span style='color:#ef3a6d'>Y</span></div>
+                        </div>
+                        <!-- <div class='composer'>
+                            <div class='left'>COMPOSED BY</div>
+                            <div class='right'>
+                                <p>Hayley Aitken</p>
+                                <p>Olof Lindskog</p>
+                                <p>Gavin Jones</p>
+                                <p>72</p>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class='trackContent'>
+                        <div class='title'>
+                            <div style="font-size: 14pt;">4</div>
+                            <div>NO <span style='color:#ef3a6d'>GOOD</span> REASON</div>
+                        </div>
+                        <!-- <div class='composer'>
+                            <div class='left'>COMPOSED BY</div>
+                            <div class='right'>
+                                <p>Hayley Aitken</p>
+                                <p>Olof Lindskog</p>
+                                <p>Gavin Jones</p>
+                                <p>72</p>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+
         </div>
+
     </div>
 
+    <div class='container-inti'>
+        <div id='footer'>
+            <div style='display:flex; flex-direction: column; align-items: center;'>
+                <div id='quotes'>
+                    "Yuehua hire me"
+                </div>
+                <div id='profile'>
+                    <div style='text-align: right; margin: 0 15px 0 0'>
+                        <div style='font-size: 12pt;'>Aditya</div>
+                        <div style='font-size: 8pt;'>@clawdius_</div>
+                    </div>
+                    <img src="media/pics/avatar.jpg" id='avatar'>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
-
-
-
 
 </html>

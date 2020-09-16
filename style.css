@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&display=swap');
 @font-face {
     font-family: "Credit";
     src: url(media/creditva.ttf) format("truetype");
@@ -21,6 +22,9 @@
     #main {
         padding: 0 !important;
     }
+    #videoStart {
+        display: none;
+    }
     .sectionTitle {
         font-size: 24pt !important;
         text-align: center !important;
@@ -36,6 +40,33 @@
     }
     #track {
         padding: 0 0 20px 0 !important;
+    }
+    #specialPresent {
+        padding: 0 0 20px 0 !important;
+    }
+    #special .message {
+        width: 100% !important;
+        padding: 0 !important;
+    }
+    #special .picContainer {
+        width: 100% !important;
+        height: 550px !important;
+    }
+    #special #mobileMessage {
+        padding: 10px 20px !important;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .messageContainer {
+        flex-direction: column !important;
+    }
+    #mvTeaser {
+        height: 300px !important;
+        padding: 0 !important;
+    }
+    #mvTeaser .mvContainer {
+        height: 200px !important;
     }
 }
 
@@ -113,13 +144,14 @@ a {
 } */
 
 .sectionTitle {
-    font-size: 86pt;
+    font-size: 24pt;
     font-family: 'Bebas Neue';
     font-weight: normal;
     text-align: right;
     letter-spacing: 0;
     padding: 48px 0;
     width: 100%;
+    letter-spacing: 10px;
     display: none;
 }
 
@@ -133,13 +165,36 @@ a {
     color: #FAFAFA;
 }
 
+#videoStart {
+    width: 100%;
+    padding: 0 0 50vh 0;
+    height: 100vh;
+}
+
+#videoStart #video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    padding: 0 15% 0 15%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#videoStart #video iframe {
+    height: 100%;
+    width: 100%;
+    transform: scale(1.25);
+    border: none;
+}
+
 .gallery {
     width: 100%;
     font-size: 0;
     padding: 0 0 240px 0;
 }
 
-.gallery .row {
+.row {
     display: flex;
     flex-direction: row;
     height: 100%;
@@ -154,7 +209,7 @@ a {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    padding: 0 0 360px 0;
+    padding: 0 0 240px 0;
     overflow: hidden;
 }
 
@@ -211,6 +266,91 @@ a {
     margin-top: 0;
 }
 
+#specialPresent {
+    width: 100%;
+    padding: 0 0 240px 0;
+}
+
+#special {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+#special .specialImage {
+    height: 100%;
+    width: 10%;
+    flex-grow: 1;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+#special .specialTitle {
+    color: white;
+    font-size: 14pt;
+    padding: 24px 0;
+}
+
+#special #rowVideo {
+    width: 100%;
+    height: 565px;
+    overflow: hidden;
+}
+
+#special #rowVideo iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+#special .messageContainer {
+    width: 100%;
+}
+
+#special .picContainer {
+    height: 550px;
+    width: 50%;
+    overflow: hidden;
+}
+
+#special .message {
+    display: flex;
+    overflow: scroll;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gaegu';
+    font-size: 14pt;
+}
+
+#special .message #mobileMessage {
+    padding: 0 20px;
+}
+
+#special .picContainer img {
+    top: -200px;
+    left: -150px;
+    height: 1200px;
+    position: relative;
+}
+
+#mvTeaser {
+    height: 800px;
+    padding: 60px 0 120px 0;
+}
+
+#mvTeaser .mvContainer {
+    height: 600px;
+}
+
+#mvTeaser iframe {
+    height: 100%;
+    width: 100%;
+    border: none;
+}
+
 
 /* Sidebar things */
 
@@ -234,7 +374,7 @@ a {
 }
 
 #progressHollow {
-    background-color: rgb(68, 68, 68);
+    background-color: #444444;
     height: 50%;
     z-index: 1;
 }

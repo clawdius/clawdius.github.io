@@ -150,8 +150,36 @@ window.onload = function() {
         offset: 100
     })
 
+    var medley = new Waypoint({
+        element: document.getElementById('highlight'),
+        handler: function(direction) {
+            if (direction == 'down') {
+                setActiveList(7, 6);
+            }
+            if (direction == 'up') {
+                setActiveList(6, 5);
+            }
+        },
+        group: 'list',
+        offset: 100
+    })
+
+    var vlive = new Waypoint({
+        element: document.getElementById('vlive'),
+        handler: function(direction) {
+            if (direction == 'down') {
+                setActiveList(8, 7);
+            }
+            if (direction == 'up') {
+                setActiveList(7, 6);
+            }
+        },
+        group: 'list',
+        offset: 100
+    })
+
     var endGame = new Waypoint({
-        element: document.getElementById('mvTeaser'),
+        element: document.getElementById('vlive'),
         handler: function(direction) {
             if (direction == 'down') {
                 sidebarOutro();

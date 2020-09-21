@@ -176,16 +176,18 @@ a {
     justify-content: center;
     align-items: center;
     border: none;
-    padding: 0 15% 0 15%;
+    padding: 0 15%;
     height: 100%;
     overflow: hidden;
 }
 
 #videoStart #video iframe {
     height: 100%;
-    width: 100%;
-    transform: scale(1.25);
-    border: none;
+    width: 88%;
+    transform: scale(0.85);
+    border: white 2px solid;
+    box-shadow: 0px 0px 40px 16px #701989;
+    position: absolute;
 }
 
 .gallery {
@@ -336,16 +338,22 @@ a {
     position: relative;
 }
 
-#mvTeaser {
+#mvTeaser,
+#highlight,
+#vlive {
     height: 800px;
     padding: 60px 0 120px 0;
 }
 
-#mvTeaser .mvContainer {
+#mvTeaser .mvContainer,
+#highlight .medleyContainer,
+#vlive .vliveContainer {
     height: 600px;
 }
 
-#mvTeaser iframe {
+#mvTeaser iframe,
+#highlight iframe,
+#vlive iframe {
     height: 100%;
     width: 100%;
     border: none;

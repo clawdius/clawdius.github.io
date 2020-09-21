@@ -61,11 +61,15 @@
     .messageContainer {
         flex-direction: column !important;
     }
-    #mvTeaser {
+    #mvTeaser,
+    #highlight,
+    #vlive {
         height: 300px !important;
         padding: 0 !important;
     }
-    #mvTeaser .mvContainer {
+    #mvTeaser .mvContainer,
+    #highlight .medleyContainer,
+    #vlive .vliveContainer {
         height: 200px !important;
     }
 }

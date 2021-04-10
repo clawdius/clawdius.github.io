@@ -9,6 +9,7 @@
     --white: #ffffff;
     --black: #1a1a1a;
     --blue: #4b81e4;
+    --DynamicColor: ;
 }
 
 
@@ -64,6 +65,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 2px;
     text-align: center;
+    overflow: hidden;
 }
 
 .description {

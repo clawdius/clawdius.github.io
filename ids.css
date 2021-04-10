@@ -1,6 +1,5 @@
 #firstPanel {
     color: var(--white);
-    background: linear-gradient(42deg, rgba(75, 129, 228, 1) 0%, rgba(0, 134, 255, 1) 100%);
 }
 
 .item {

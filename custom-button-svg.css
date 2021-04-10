@@ -1,18 +1,18 @@
 /* Custom button */
 
 .custom-button-svg * {
-    transition: all 0.15s;
     cursor: pointer;
     text-transform: uppercase;
 }
 
 .custom-button-svg path {
     fill-opacity: 0;
+    transition: all 0.15s;
     d: path("M2.750 2.750 L205.250 2.750 L205.250 28.750 L205.250 49.250 L2.750 49.250 L2.750 22.750 L2.750 2.750 Z");
 }
 
 .custom-button-svg text {
-    fill: var(--white);
+    transition: all 0.5s;
 }
 
 .custom-button-svg:hover path {
@@ -22,5 +22,5 @@
 }
 
 .custom-button-svg:hover text {
-    fill: var(--blue);
+    fill: var(--DynamicColor);
 }

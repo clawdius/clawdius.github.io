@@ -26,9 +26,8 @@ window.onload = function() {
 
     intro()
 
-
     //Declare array and orders
-    bgcolors = ['#4b81e4', '#f59342', '#2dbd81', '#aa2dbd', '#bd2d7f', '#bd2d37', '#bd512d']
+    bgcolors = ['#4b81e4', '#4b5ae4', '#864be4', '#ac4be4', '#d74be4', '#e44bbe', '#e44b79', '#e45f4b', '#e4924b', '#e4c84b', '#71e44b', '#4be467', '#4be4ac', '#4ba4e4']
     colorsOrder = 0
 
     //Declare elements

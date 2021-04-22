@@ -1,70 +1,52 @@
 window.onload = function() {
 
-    function intro() {
-        var items = document.getElementsByClassName('item')
-        var delay = 0;
+    var cards = document.getElementsByClassName('card-content')
 
-        document.getElementById('title').style.animation = 'itemSlideUp 0.5s ease-in-out'
-        document.getElementById('smallTitle').style.animation = 'itemSlideUp 0.85s ease-in-out'
-
-        for (let i = 0; i < items.length; i++) {
-            items[i].style.opacity = '0'
-
-            if (i % 2 == 0) {
-                items[i].style.animation = 'itemSlideToLeft 0.35s ease-out'
-            } else {
-                items[i].style.animation = 'itemSlideToRight 0.35s ease-out'
-            }
-            items[i].style.animationDelay = delay + 's'
-            items[i].onanimationend = function() {
-                items[i].style.opacity = '1'
-            }
-
-            delay += 0.1
+    if (window.matchMedia('(min-width: 1200px)').matches) {
+        for (let i = 0; i < cards.length; i++) {
+            cards[i].addEventListener("mouseenter", function() {
+                cards[i].getElementsByClassName('card-description')[0].style.height = '4em'
+                cards[i].getElementsByClassName('card-link')[0].style.height = '24px'
+            })
+            cards[i].addEventListener("mouseleave", function() {
+                cards[i].getElementsByClassName('card-description')[0].style.height = '0'
+                cards[i].getElementsByClassName('card-link')[0].style.height = '0'
+            })
+        }
+    } else if (window.matchMedia('(min-width: 850px)').matches) {
+        for (let i = 0; i < cards.length; i++) {
+            cards[i].getElementsByClassName('card-link')[0].style.height = '24px'
         }
     }
 
-    intro()
-
-    //Declare array and orders
-    bgcolors = ['#4b81e4', '#4b5ae4', '#864be4', '#ac4be4', '#d74be4', '#e44bbe', '#e44b79', '#e45f4b', '#e4924b', '#e4c84b', '#71e44b', '#4be467', '#4be4ac', '#4ba4e4']
-    colorsOrder = 0
-
-    //Declare elements
-    var Panel = document.getElementById('firstPanel')
-    var Span = document.getElementById('firstSpan')
-
-    //Declare dynamic color
-    var root = document.querySelector(':root')
-    root.style.setProperty('--DynamicColor', bgcolors[0])
-
-    //Startup
-    Panel.style.transition = ''
-    Span.style.transition = ''
-
-    Panel.style.backgroundColor = bgcolors[0]
-    Span.style.color = bgcolors[0]
-
-    function changeBG() {
-        if (colorsOrder == bgcolors.length) {
-            colorsOrder = 0
-        }
-
-        Span.style.color = bgcolors[colorsOrder]
-        Panel.style.backgroundColor = bgcolors[colorsOrder]
-        root.style.setProperty('--DynamicColor', bgcolors[colorsOrder])
-
-        colorsOrder += 1
+    for (let i = 0; i < cards.length; i++) {
+        cards[i].addEventListener('click', function() {
+            openNewLink(cards[i].getAttribute('id'))
+        })
     }
 
-    changeBG()
-
-    //Change background every 4 secs
-    setInterval(function() {
-        changeBG()
-        Panel.style.transition = 'background-color 2s ease-in-out'
-        Span.style.transition = 'all 2s ease-in-out'
-    }, 2000)
+    function openNewLink(destination) {
+        switch (destination) {
+            case 'instagram':
+                open('http://instagram.com/clawdius_/')
+                break
+            case 'twitter':
+                open('http://twitter.com/clawdius_/')
+                break
+            case 'twitter-bot':
+                open('http://twitter.com/clawdius_bot/')
+                break
+            case 'pinterest':
+                open('http://pinterest.com/clawdius_/')
+                break
+            case 'steam':
+                open('http://steamcommunity.com/id/2ez4clawdius')
+                break
+            case 'github':
+                open('http://github.com/clawdius')
+                break
+        }
+    }
 
 
 }

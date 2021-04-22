@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" media="screen" href="style.css">
-    <link rel="stylesheet" media="screen" href="animation.css">
-    <link rel="stylesheet" media="screen" href="ids.css">
-    <link rel="stylesheet" media="screen" href="custom-button-svg.css">
+    <link rel="stylesheet" media="screen" href="styleMobile.css">
+    <!-- <link rel="stylesheet" media="screen" href="animation.css"> -->
     <link rel="shortcut icon" type="image/x-icon" href="favico.ico">
     <script src="scripts.js"></script>
     <!-- <script src="noframework.waypoints.min.js"></script> -->
@@ -18,56 +17,77 @@
 
 <body>
 
-    <div class='container-outer d-flex justify-content-center align-items-center' id='firstPanel'>
-        <div class='container-inner d-inline-flex align-items-center flex-column justify-content-center'>
-            <div class='title' id='title'>This isn't <span id='firstSpan' style='background-color: var(--white); padding: 0px 10px'>linktr.ee</span></div>
-            <div class='description my-2' id='smallTitle'>But works like linktr.ee! ❤</div>
-            <div class='d-inline-flex flex-column mt-5 align-items-center justify-content-center' id='items'>
-                <a href="https://www.instagram.com/clawdius_/" class='item' target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="210.5px" height="54.5px" class='custom-button-svg'>
-                    <path fill-rule="evenodd"  stroke="rgb(255, 255, 255)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="rgb(255, 255, 255)"></path>
-                    <text fill="#ffffff" x="50%" y="50%" alignment-baseline="middle" text-anchor="middle" font-size="12pt" font-family="Oswald" letter-spacing="4px">Instagram</text>
-                    </svg>
-                </a>
-                <a href="https://twitter.com/clawdius_" class='item' target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="210.5px" height="54.5px" class='custom-button-svg'>
-                    <path fill-rule="evenodd"  stroke="rgb(255, 255, 255)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="rgb(255, 255, 255)"></path>
-                    <text fill="#ffffff" x="50%" y="50%" alignment-baseline="middle" text-anchor="middle" font-size="12pt" font-family="Oswald" letter-spacing="4px">Twitter</text>
-                    </svg>
-                </a>
-                <a href="https://twitter.com/clawdius_bot" class='item' target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="210.5px" height="54.5px" class='custom-button-svg'>
-                    <path fill-rule="evenodd"  stroke="rgb(255, 255, 255)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="rgb(255, 255, 255)"></path>
-                    <text fill="#ffffff" x="50%" y="50%" alignment-baseline="middle" text-anchor="middle" font-size="12pt" font-family="Oswald" letter-spacing="4px">Twitter Bot</text>
-                    </svg>
-                </a>
-                <a href="https://steamcommunity.com/id/2ez4clawdius" class='item' target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="210.5px" height="54.5px" class='custom-button-svg'>
-                    <path fill-rule="evenodd"  stroke="rgb(255, 255, 255)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="rgb(255, 255, 255)"></path>
-                    <text fill="#ffffff" x="50%" y="50%" alignment-baseline="middle" text-anchor="middle" font-size="12pt" font-family="Oswald" letter-spacing="4px">Steam</text>
-                    </svg>
-                </a>
-                <a href="https://www.reddit.com/user/clawdius25" class='item' target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="210.5px" height="54.5px" class='custom-button-svg'>
-                    <path fill-rule="evenodd"  stroke="rgb(255, 255, 255)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="rgb(255, 255, 255)"></path>
-                    <text fill="#ffffff" x="50%" y="50%" alignment-baseline="middle" text-anchor="middle" font-size="12pt" font-family="Oswald" letter-spacing="4px">Reddit</text>
-                    </svg>
-                </a>
-                <a href="https://github.com/clawdius" class='item' target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="210.5px" height="54.5px" class='custom-button-svg'>
-                    <path fill-rule="evenodd"  stroke="rgb(255, 255, 255)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="rgb(255, 255, 255)"></path>
-                    <text fill="#ffffff" x="50%" y="50%" alignment-baseline="middle" text-anchor="middle" font-size="12pt" font-family="Oswald" letter-spacing="4px">Github</text>
-                    </svg>
-                </a>
-                <a href="https://id.pinterest.com/clawdius_" class='item' target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="210.5px" height="54.5px" class='custom-button-svg'>
-                    <path fill-rule="evenodd"  stroke="rgb(255, 255, 255)" stroke-width="2px" stroke-linecap="butt" stroke-linejoin="miter" fill="rgb(255, 255, 255)"></path>
-                    <text fill="#ffffff" x="50%" y="50%" alignment-baseline="middle" text-anchor="middle" font-size="12pt" font-family="Oswald" letter-spacing="4px">Pinterest</text>
-                    </svg>
-                </a>
+    <div class='navbar-container static'>
+        <div class='navbar-content navbar-logo'>stylish<span style='font-weight: 600;'>minimalist.</span></div>
+    </div>
+
+    <div class='container-main'>
+        <div class='container-main-content'>
+            <div class='container-main-wrap'>
+                <div class='link-group column-line'>
+                    <div class='link-group row-line' id='socialMedia'>
+                        <div class='card-content' id='instagram'>
+                            <div class='info-box'>
+                                <div class='card-link'>instagram.com/<strong>clawdius_</strong></div>
+                                <div class='card-title'>Instagram</div>
+                                <div class='card-description'>I like to create a snapgram discussing about why my idols never loved me.</div>
+                                <div class='card-mobile'>@clawdius_</div>
+                            </div>
+                        </div>
+                        <div class='link-group column-line'>
+                            <div class='link-group row-line'>
+                                <div class='card-content' id='twitter'>
+                                    <div class='info-box'>
+                                        <div class='card-link'>twitter.com/<strong>clawdius_</strong></div>
+                                        <div class='card-title'>Twitter</div>
+                                        <div class='card-description'>This is where i dump my meme and worship idols.</div>
+                                        <div class='card-mobile'>@clawdius_</div>
+                                    </div>
+                                </div>
+                                <div class='card-content' id='twitter-bot'>
+                                    <div class='info-box'>
+                                        <div class='card-link'>twitter.com/<strong>clawdius_bot</strong></div>
+                                        <div class='card-title'>Twitter Bot</div>
+                                        <div class='card-description'>Why retweet manually when a robot can do it for you?</div>
+                                        <div class='card-mobile'>@clawdius_bot</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='card-content' id='pinterest'>
+                                <div class='info-box'>
+                                    <div class='card-link'>pinterest.com/<strong>clawdius_</strong></div>
+                                    <div class='card-title'>Pinterest</div>
+                                    <div class='card-description'>I spend 6 hours looking at a minimalist website design and get mad about it.</div>
+                                    <div class='card-mobile'>clawdius_</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='link-group row-line' id='games'>
+                        <div class='card-content' id='steam'>
+                            <div class='info-box'>
+                                <div class='card-link'>steamcommunity.com/id/<strong>2ez4clawdius</strong></div>
+                                <div class='card-title'>Steam</div>
+                                <div class='card-description'>Dota 2, Rainbow Six: Siege, Satisfactory - you want it? It's yours, my friend, as long as you have money.</div>
+                                <div class='card-mobile'>Literally Dying</div>
+                            </div>
+                        </div>
+                        <div class='card-content' id='github'>
+                            <div class='info-box'>
+                                <div class='card-link'>github.com/<strong>clawdius</strong></div>
+                                <div class='card-title'>Github</div>
+                                <div class='card-description'>Thank you github for hosting this website, very cool of you guys.</div>
+                                <div class='card-mobile'>clawdius</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='copyright'>Designed and created by <strong>Aditya Lila</strong> 2021.</div>
             </div>
         </div>
     </div>
+
+
 
 </body>
 

@@ -1,0 +1,27 @@
+@media screen and (max-width: 850px) {
+    .container-main {
+        height: 125vh;
+    }
+    .row-line {
+        flex-direction: column;
+    }
+    .card-title {
+        font-size: 1.75em;
+        text-align: center;
+    }
+    .info-box {
+        position: static;
+        padding: 0 2vw;
+    }
+    #instagram {
+        height: 50%;
+    }
+    #pinterest {
+        height: 50%;
+    }
+    .card-mobile {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+}

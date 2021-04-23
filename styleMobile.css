@@ -5,9 +5,15 @@
     .row-line {
         flex-direction: column;
     }
+    .card-content {
+        animation-duration: 0.5s;
+    }
     .card-title {
         font-size: 1.75em;
         text-align: center;
+    }
+    .card-wrapper {
+        display: flex;
     }
     .info-box {
         position: static;
@@ -23,5 +29,8 @@
         display: block;
         text-align: center;
         width: 100%;
+    }
+    .copyright {
+        bottom: -48px
     }
 }

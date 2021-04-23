@@ -88,6 +88,7 @@ body {
     width: 100%;
     height: 100%;
     padding: 9vh 7.5vw;
+    position: relative;
 }
 
 .container-main-wrap {
@@ -95,6 +96,7 @@ body {
     position: relative;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 .link-group {
@@ -120,6 +122,15 @@ body {
     height: 100%;
     position: relative;
     cursor: pointer;
+    overflow: hidden;
+    visibility: hidden;
+    animation-duration: 1s;
+}
+
+.card-wrapper {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
 
 .info-box {
@@ -161,6 +172,10 @@ body {
     font-family: 'Open Sans';
     font-size: 0.75em;
     letter-spacing: 2px;
+    color: var(--white);
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    text-align: center;
 }
 
 .card-mobile {
@@ -182,23 +197,27 @@ body {
 /* Content custom ID */
 
 #twitter {
-    background-color: #469de0;
+    background: linear-gradient(36deg, rgba(70, 157, 224, 1) 0%, rgba(78, 169, 240, 1) 100%);
 }
 
 #twitter-bot {
-    background-color: #358ed3;
+    background: linear-gradient(36deg, rgba(53, 142, 211, 1) 0%, rgba(24, 126, 204, 1) 100%);
 }
 
 #github {
-    background-color: #333;
+    background: linear-gradient(36deg, rgb(51, 51, 51) 0%, rgb(58, 58, 58) 0%);
 }
 
 #pinterest {
-    background-color: #d3102d;
+    background: linear-gradient(36deg, rgba(211, 16, 45, 1) 0%, rgba(221, 0, 33, 1) 100%);
 }
 
 #instagram {
     background: linear-gradient(45deg, rgba(138, 58, 185, 1) 0%, rgba(188, 42, 141, 1) 25%, rgba(252, 204, 99, 1) 100%);
+}
+
+#steam {
+    background: linear-gradient(36deg, rgba(33, 33, 33, 1) 0%, rgb(39, 39, 39) 100%);
 }
 
 

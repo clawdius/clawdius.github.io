@@ -2,6 +2,27 @@ window.onload = function() {
 
     var cards = document.getElementsByClassName('card-content')
 
+    function openingAnim() {
+        var delay = 0;
+        var Index = cards.length;
+        for (let i = 0; i < cards.length; i++) {
+            cards[i].style.zIndex = Index
+            cards[i].style.animationName = 'slideIn'
+            cards[i].style.animationDelay = delay + "s";
+            delay += 0.25
+            Index -= 1
+            cards[i].onanimationstart = function() {
+                cards[i].style.visibility = 'visible'
+            }
+            cards[cards.length - 1].onanimationend = function() {
+                document.getElementsByClassName('container-main-wrap')[0].style.overflow = 'visible'
+                document.getElementsByClassName('copyright')[0].style.opacity = '100%'
+            }
+        }
+    }
+
+    openingAnim()
+
     if (window.matchMedia('(min-width: 1200px)').matches) {
         for (let i = 0; i < cards.length; i++) {
             cards[i].addEventListener("mouseenter", function() {

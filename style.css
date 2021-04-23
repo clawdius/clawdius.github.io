@@ -67,8 +67,20 @@ body {
     flex-grow: 100;
 }
 
-.static {
+
+/* Copyright tapi di atas */
+
+.logo {
     position: absolute;
+    left: 16px;
+    top: -36px;
+    font-family: 'Open Sans';
+    font-size: 2;
+    letter-spacing: 2px;
+    color: var(--white);
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    text-align: center;
 }
 
 
@@ -125,6 +137,7 @@ body {
     overflow: hidden;
     visibility: hidden;
     animation-duration: 1s;
+    transition: all 0.5s ease-in-out;
 }
 
 .card-wrapper {

@@ -9,7 +9,7 @@ window.onload = function() {
             cards[i].style.zIndex = Index
             cards[i].style.animationName = 'slideIn'
             cards[i].style.animationDelay = delay + "s";
-            delay += 0.25
+            delay += 0.15
             Index -= 1
             cards[i].onanimationstart = function() {
                 cards[i].style.visibility = 'visible'
@@ -17,6 +17,7 @@ window.onload = function() {
             cards[cards.length - 1].onanimationend = function() {
                 document.getElementsByClassName('container-main-wrap')[0].style.overflow = 'visible'
                 document.getElementsByClassName('copyright')[0].style.opacity = '100%'
+                document.getElementsByClassName('logo')[0].style.opacity = '100%'
             }
         }
     }

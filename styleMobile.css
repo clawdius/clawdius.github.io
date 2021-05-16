@@ -2,6 +2,10 @@
     .container-main {
         height: 125vh;
     }
+    .logo {
+        left: 50%;
+        transform: translateX(-50%);
+    }
     .row-line {
         flex-direction: column;
     }

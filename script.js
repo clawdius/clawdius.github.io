@@ -1,6 +1,6 @@
 let pairContent = [
-    ['twitter.com/', 'clawdius_', 'Twitter', 'This is where i share my memes, content, oh yeah and also worshipping idols.', 'Visit My Twitter', 'https://twitter.com/clawdius_'],
-    ['instagram.com/', 'clawdius_', 'Instagram', 'I like to create instastory about why my idols never loved me in the first place.', 'Visit My Instagram', 'https://instagram.com/clawdius_'],
+    ['twitter.com/', 'clawdius_', 'Twitter', 'This is where i share my memes and also worshipping idols.', 'Visit My Twitter', 'https://twitter.com/clawdius_'],
+    ['instagram.com/', 'clawdius_', 'Instagram', 'I like to create instastory about why my idols never loved me.', 'Visit My Instagram', 'https://instagram.com/clawdius_'],
     ['pinterest.com/', 'clawdius_', 'Pinterest', 'I spend 8 hours looking at minimalist website design and get mad about it.', 'Visit My Pinterest', 'https://pinterest.com/clawdius_'],
     ['steamcommunity.com/id/', '2ez4clawdius', 'Steam', 'From Rainbow Six: Siege to Stardew Valley, i enjoy wide variety of games.', 'Visit My Steam', 'https://steamcommunity.com/id/2ez4clawdius'],
     ['github.com/', 'clawdius', 'Github', 'Thank you Github for hosting this static website for free.', 'Visit My Github', 'https://github.com/clawdius'],

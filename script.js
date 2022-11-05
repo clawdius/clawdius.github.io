@@ -1,11 +1,14 @@
 let pairContent = [
-    ['twitter.com/', 'clawdius_', 'Twitter', 'This is where i share my memes and also worshipping idols.', 'Visit My Twitter', 'https://twitter.com/clawdius_'],
-    ['instagram.com/', 'clawdius_', 'Instagram', 'I like to create instastory about why my idols never loved me.', 'Visit My Instagram', 'https://instagram.com/clawdius_'],
-    ['pinterest.com/', 'clawdius_', 'Pinterest', 'I spend 8 hours looking at minimalist website design and get mad about it.', 'Visit My Pinterest', 'https://pinterest.com/clawdius_'],
-    ['steamcommunity.com/id/', '2ez4clawdius', 'Steam', 'From Rainbow Six: Siege to Stardew Valley, i enjoy wide variety of games.', 'Visit My Steam', 'https://steamcommunity.com/id/2ez4clawdius'],
-    ['github.com/', 'clawdius', 'Github', 'Thank you Github for hosting this static website for free.', 'Visit My Github', 'https://github.com/clawdius'],
-    ['mailto:', 'adityalilasaputra@gmail.com', 'Email', 'Have any question or something you want to say?', 'Mail Me', 'mailto:adityalilasaputra@gmail.com']
+    ['twitter.com/', 'clawdius_', 'Twitter', 'This is where i share my memes and also worshipping idols.', 'Visit My Twitter', 'https://twitter.com/clawdius_', 'blue'],
+    ['instagram.com/', 'clawdius_', 'Instagram', 'I like to create instastory about why my idols never loved me.', 'Visit My Instagram', 'https://instagram.com/clawdius_', 'cyan'],
+    ['pinterest.com/', 'clawdius_', 'Pinterest', 'I spend 8 hours looking at minimalist website design and get mad about it.', 'Visit My Pinterest', 'https://pinterest.com/clawdius_', 'red'],
+    ['steamcommunity.com/id/', '2ez4clawdius', 'Steam', 'From Rainbow Six: Siege to Stardew Valley, i enjoy wide variety of games.', 'Visit My Steam', 'https://steamcommunity.com/id/2ez4clawdius', 'grey'],
+    ['github.com/', 'clawdius', 'Github', 'Thank you Github for hosting this static website for free.', 'Visit My Github', 'https://github.com/clawdius', 'black-grey'],
+    ['mailto:', 'adityalilasaputra@gmail.com', 'Email', 'Have any question or something you want to say?', 'Mail Me', 'mailto:adityalilasaputra@gmail.com', 'purple']
 ]
+
+let mainContent = document.getElementById('main-content').children
+let logoList = document.getElementById('logo-list').children
 
 function startTime() {
     const today = new Date();
@@ -24,18 +27,17 @@ function checkTime(i) {
     return i;
 }
 
-function changeLogoState(index, color) {
+function changeLogoState(index) {
     let logo = document.getElementsByClassName('logo-list')
     for (let i = 0; i < logo.length; i++) {
         logo[i].style.opacity = '50%'
         logo[i].style.backgroundColor = null
     }
     logo[index].style.opacity = '1'
-    logo[index].style.backgroundColor = 'var(--' + color + ')'
+    logo[index].style.backgroundColor = 'var(--' + pairContent[index][6] + ')'
 }
 
 function transitionList() {
-    let logoList = document.getElementById('logo-list').children
     delay = 0;
     for (let i = 0; i < logoList.length; i++) {
         logoList[i].style.animation = 'appearBT-logo 0.2s ease-in-out ' + delay + 's';
@@ -47,7 +49,6 @@ function transitionList() {
 }
 
 function transitionEnter() {
-    let mainContent = document.getElementById('main-content').children
     delay = 0;
     for (let i = 0; i < mainContent.length; i++) {
         mainContent[i].style.animation = 'appearBT 0.35s ease-in-out ' + delay + 's';
@@ -56,10 +57,15 @@ function transitionEnter() {
         }
         delay += 0.15;
     }
+
+    setTimeout(function() {
+        for (let i = 0; i < logoList.length; i++) {
+            logoList[i].setAttribute('onclick', 'changeMainContent(' + i + ')');
+        }
+    }, 900)
 }
 
 function transitionQuit() {
-    let mainContent = document.getElementById('main-content').children
     delay = 0;
     for (let i = 0; i < mainContent.length; i++) {
         mainContent[i].style.animation = 'disappearBT 0.35s ease-in-out ' + delay + 's';
@@ -68,10 +74,14 @@ function transitionQuit() {
         }
         delay += 0.15;
     }
+
+    for (let i = 0; i < logoList.length; i++) {
+        logoList[i].setAttribute('onclick', '');
+    }
 }
 
-function changeMainContent(index, color) {
-    changeLogoState(index, color)
+function changeMainContent(index) {
+    changeLogoState(index)
     transitionQuit()
     setTimeout(function() {
         onanimationend = () => {
@@ -83,6 +93,6 @@ function changeMainContent(index, color) {
             document.getElementById('media-link').href = pairContent[index][5]
         }
     }, 800)
-    setTimeout(transitionEnter, 1100)
+    setTimeout(transitionEnter, 900)
 
 }

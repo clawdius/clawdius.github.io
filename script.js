@@ -2,7 +2,7 @@ let pairContent = [
     ['twitter.com/', 'clawdius_', 'Twitter', 'This is where i share my memes and also worshipping idols.', 'Visit My Twitter', 'https://twitter.com/clawdius_', 'blue'],
     ['instagram.com/', 'clawdius_', 'Instagram', 'I like to create instastory about why my idols never loved me.', 'Visit My Instagram', 'https://instagram.com/clawdius_', 'cyan'],
     ['pinterest.com/', 'clawdius_', 'Pinterest', 'I spend 8 hours looking at minimalist website design and get mad about it.', 'Visit My Pinterest', 'https://pinterest.com/clawdius_', 'red'],
-    ['steamcommunity.com/id/', '2ez4clawdius', 'Steam', 'From Rainbow Six: Siege to Stardew Valley, i enjoy wide variety of games.', 'Visit My Steam', 'https://steamcommunity.com/id/2ez4clawdius', 'grey'],
+    ['steamcommunity.com/id/', 'clawdius_', 'Steam', 'From Rainbow Six: Siege to Stardew Valley, i enjoy wide variety of games.', 'Visit My Steam', 'https://steamcommunity.com/id/clawdius_', 'grey'],
     ['github.com/', 'clawdius', 'Github', 'Thank you Github for hosting this static website for free.', 'Visit My Github', 'https://github.com/clawdius', 'black-grey'],
     ['mailto:', 'adityalilasaputra@gmail.com', 'Email', 'Have any question or something you want to say?', 'Mail Me', 'mailto:adityalilasaputra@gmail.com', 'purple']
 ]

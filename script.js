@@ -1,8 +1,8 @@
 let pairContent = [
-    ['twitter.com/', 'clawdius_', 'Twitter', 'This is where i share my memes and also worshipping idols.', 'Visit My Twitter', 'https://twitter.com/clawdius_', 'blue'],
+    ['twitter.com/', 'clawdius_', 'Twitter', 'This is where I share my memes and also worships idols.', 'Visit My Twitter', 'https://twitter.com/clawdius_', 'blue'],
     ['instagram.com/', 'clawdius_', 'Instagram', 'I like to create instastory about why my idols never loved me.', 'Visit My Instagram', 'https://instagram.com/clawdius_', 'cyan'],
-    ['pinterest.com/', 'clawdius_', 'Pinterest', 'I spend 8 hours looking at minimalist website design and get mad about it.', 'Visit My Pinterest', 'https://pinterest.com/clawdius_', 'red'],
-    ['steamcommunity.com/id/', 'clawdius_', 'Steam', 'From Rainbow Six: Siege to Stardew Valley, i enjoy wide variety of games.', 'Visit My Steam', 'https://steamcommunity.com/id/clawdius_', 'grey'],
+    ['pinterest.com/', 'clawdius_', 'Pinterest', 'If others use Behance to post their digital portofolio, then i use Pinterest.', 'Visit My Pinterest', 'https://pinterest.com/clawdius_/my-finest-creation/', 'red'],
+    ['steamcommunity.com/id/', 'clawdius_', 'Steam', 'From Rainbow Six: Siege to Stardew Valley, I (mostly) enjoy wide variety of games.', 'Visit My Steam', 'https://steamcommunity.com/id/clawdius_', 'grey'],
     ['github.com/', 'clawdius', 'Github', 'Thank you Github for hosting this static website for free.', 'Visit My Github', 'https://github.com/clawdius', 'black-grey'],
     ['mailto:', 'adityalilasaputra@gmail.com', 'Email', 'Have any question or something you want to say?', 'Mail Me', 'mailto:adityalilasaputra@gmail.com', 'purple']
 ]
@@ -32,19 +32,22 @@ function changeLogoState(index) {
     for (let i = 0; i < logo.length; i++) {
         logo[i].style.opacity = '50%'
         logo[i].style.backgroundColor = null
-    }
-    logo[index].style.opacity = '1'
-    logo[index].style.backgroundColor = 'var(--' + pairContent[index][6] + ')'
+
+        if(i == logo.length - 1) {
+            logo[index].style.opacity = '1'
+            logo[index].style.backgroundColor = 'var(--' + pairContent[index][6] + ')'
+        }
+    }  
 }
 
 function transitionList() {
     delay = 0;
     for (let i = 0; i < logoList.length; i++) {
-        logoList[i].style.animation = 'appearBT-logo 0.2s ease-in-out ' + delay + 's';
+        logoList[i].style.animation = 'appearBT-logo 0.8s ease-in-out ' + delay + 's';
         logoList[i].onanimationend = () => {
-            logoList[i].style.opacity = '1'
+            logoList[i].style.opacity = '100%'
         }
-        delay += 0.1;
+        delay += 0.075;
     }
 }
 
@@ -55,14 +58,14 @@ function transitionEnter() {
         mainContent[i].onanimationend = () => {
             mainContent[i].style.opacity = '1'
         }
-        delay += 0.15;
+        delay += 0.2;
     }
 
     setTimeout(function() {
         for (let i = 0; i < logoList.length; i++) {
             logoList[i].setAttribute('onclick', 'changeMainContent(' + i + ')');
         }
-    }, 900)
+    }, 1000)
 }
 
 function transitionQuit() {

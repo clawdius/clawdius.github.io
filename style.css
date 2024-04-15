@@ -110,7 +110,6 @@ body {
 }
 
 .logo-list {
-    border: var(--white) solid 1px;
     border-radius: 12em;
     padding: 0.35em;
     cursor: pointer;
@@ -151,7 +150,7 @@ body {
 @keyframes appearBT {
     0% {
         opacity: 0;
-        transform: translateY(0.5em)
+        transform: translateY(0.1em)
     }
     100% {
         opacity: 1;
@@ -161,8 +160,8 @@ body {
 
 @keyframes appearBT-logo {
     0% {
-        opacity: 0;
-        transform: translateY(1em)
+        opacity: 0%;
+        transform: translateY(2em)
     }
     100% {
         opacity: 1;
@@ -177,6 +176,6 @@ body {
     }
     100% {
         opacity: 0;
-        transform: translateY(-0.5em)
+        transform: translateY(-0.1em)
     }
 }

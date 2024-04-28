@@ -1,9 +1,11 @@
 let pairContent = [
-    ['twitter.com/', 'clawdius_', 'Twitter', 'This is where I share my memes and also worships idols.', 'Visit My Twitter', 'https://twitter.com/clawdius_', 'blue'],
-    ['instagram.com/', 'clawdius_', 'Instagram', 'I like to create instastory about why my idols never loved me.', 'Visit My Instagram', 'https://instagram.com/clawdius_', 'cyan'],
-    ['pinterest.com/', 'clawdius_', 'Pinterest', 'If others use Behance to post their digital portofolio, then i use Pinterest.', 'Visit My Pinterest', 'https://pinterest.com/clawdius_/my-finest-creation/', 'red'],
-    ['steamcommunity.com/id/', 'clawdius_', 'Steam', 'From Rainbow Six: Siege to Stardew Valley, I (mostly) enjoy wide variety of games.', 'Visit My Steam', 'https://steamcommunity.com/id/clawdius_', 'grey'],
+    ['twitter.com/', 'clawdius_', 'Twitter', 'This is the place where most of my sanity drains.', 'Visit My Twitter', 'https://twitter.com/clawdius_', 'blue'],
+    ['instagram.com/', 'clawdius_', 'Instagram', 'I rarely upload photos but I love to spam instastory.', 'Visit My Instagram', 'https://instagram.com/clawdius_', 'cyan'],
+    ['pinterest.com/', 'clawdius_', 'Pinterest', 'If others use Behance to post their digital portofolio, then i use Pinterest.', 'Visit My Pinterest', 'https://pinterest.com/clawdius_/my-finest-creation/', 'firebrick'],
+    ['steamcommunity.com/id/', 'clawdius_', 'Steam', 'From Rainbow Six: Siege to Stardew Valley, I enjoy wide variety of games.', 'Visit My Steam', 'https://steamcommunity.com/id/clawdius_', 'grey'],
     ['github.com/', 'clawdius', 'Github', 'Thank you Github for hosting this static website for free.', 'Visit My Github', 'https://github.com/clawdius', 'black-grey'],
+    ['facebook.com/', 'clawdiusunderscore', 'Facebook', "Who uses facebook these days? That's right, it's Me.", 'Visit My Facebook', 'https://facebook.com/clawdiusunderscore', 'dodger-blue'],
+    ['youtube.com/', '@clawdius_', 'Youtube', 'I mostly upload my 3D animation contents here, instead of Pinterest.', 'Visit My Youtube', 'https://youtube.com/@clawdius_', 'red'],
     ['mailto:', 'adityalilasaputra@gmail.com', 'Email', 'Have any question or something you want to say?', 'Mail Me', 'mailto:adityalilasaputra@gmail.com', 'purple']
 ]
 
@@ -45,7 +47,7 @@ function transitionList() {
     for (let i = 0; i < logoList.length; i++) {
         logoList[i].style.animation = 'appearBT-logo 0.8s ease-in-out ' + delay + 's';
         logoList[i].onanimationend = () => {
-            logoList[i].style.opacity = '100%'
+            logoList[i].style.opacity = '50%'
         }
         delay += 0.075;
     }
@@ -96,6 +98,6 @@ function changeMainContent(index) {
             document.getElementById('media-link').href = pairContent[index][5]
         }
     }, 800)
-    setTimeout(transitionEnter, 900)
+    setTimeout(transitionEnter, 1000)
 
 }

@@ -13,6 +13,8 @@
     --grey: #414141;
     --black-grey: #202020;
     --purple: #a962ec;
+    --dodger-blue: #1e90ff;
+    --firebrick: #b22222;
 }
 
 
@@ -164,7 +166,7 @@ body {
         transform: translateY(2em)
     }
     100% {
-        opacity: 1;
+        opacity: 50%;
         transform: translateY(0)
     }
 }

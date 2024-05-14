@@ -181,3 +181,15 @@ body {
         transform: translateY(-0.1em)
     }
 }
+
+/* Media adjust for header and footer */
+
+.header-container, .footer-container {
+    padding: 1em 3em;
+}
+
+@media screen and (max-width: 760px) {
+    .header-container, .footer-container {
+        padding: 0 1.5em;
+    }
+}

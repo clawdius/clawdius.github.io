@@ -124,6 +124,13 @@ body {
     overflow-x: scroll;
 }
 
+#clock-small {
+    display: flex;
+}
+
+.ornament {
+    opacity: 0
+}
 
 /* Image & Picture  */
 
@@ -179,8 +186,18 @@ body {
     100% {
         opacity: 0;
         transform: translateY(-0.1em)
+    } 
+}
+
+@keyframes ornamentsFadeIn {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
     }
 }
+
 
 /* Media adjust for header and footer */
 

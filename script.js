@@ -4,21 +4,31 @@ let pairContent = [
     ['pinterest.com/', 'clawdius_', 'Pinterest', 'If others use Behance to post their digital portofolio, then i use Pinterest.', 'Visit My Pinterest', 'https://pinterest.com/clawdius_/my-finest-creation/', 'firebrick'],
     ['steamcommunity.com/id/', 'clawdius_', 'Steam', 'From Rainbow Six: Siege to Stardew Valley, I enjoy wide variety of games.', 'Visit My Steam', 'https://steamcommunity.com/id/clawdius_', 'grey'],
     ['github.com/', 'clawdius', 'Github', 'Thank you Github for hosting this static website for free.', 'Visit My Github', 'https://github.com/clawdius', 'black-grey'],
-    ['facebook.com/', 'clawdiusunderscore', 'Facebook', "Who uses facebook these days? That's right, it's Me.", 'Visit My Facebook', 'https://facebook.com/clawdiusunderscore', 'dodger-blue'],
+    ['facebook.com/', 'clawdiusunderscore', 'Facebook', "Who uses facebook these days? That's right, it's me.", 'Visit My Facebook', 'https://facebook.com/clawdiusunderscore', 'dodger-blue'],
     ['youtube.com/', '@clawdius_', 'Youtube', 'I mostly upload my 3D animation contents here, instead of Pinterest.', 'Visit My Youtube', 'https://youtube.com/@clawdius_', 'red'],
     ['mailto:', 'adityalilasaputra@gmail.com', 'Email', 'Have any question or something you want to say?', 'Mail Me', 'mailto:adityalilasaputra@gmail.com', 'purple']
 ]
 
-let mainContent = document.getElementById('main-content').children
-let logoList = document.getElementById('logo-list').children
+let mainContent = document.getElementById('main-content').children;
+let logoList = document.getElementById('logo-list').children;
+let ornaments = document.querySelectorAll(".ornament");
+let clockH = document.getElementById('clockH');
+let clockM = document.getElementById('clockM');
+let clockS = document.getElementById('clockS');
 
 function startTime() {
     const today = new Date();
     let h = today.getHours();
     let m = today.getMinutes();
+    let s = today.getSeconds();
     h = checkTime(h);
     m = checkTime(m);
-    document.getElementById('clock-small').innerHTML = h + ":" + m;
+    s = checkTime(s);
+
+    clockH.innerHTML = h;
+    clockM.innerHTML = m;
+    clockS.innerHTML = s;
+
     setTimeout(startTime, 1000);
 }
 
@@ -43,9 +53,9 @@ function changeLogoState(index) {
 }
 
 function transitionList() {
-    delay = 0;
+    let delay = 0;
     for (let i = 0; i < logoList.length; i++) {
-        logoList[i].style.animation = 'appearBT-logo 0.8s ease-in-out ' + delay + 's';
+        logoList[i].style.animation = `appearBT-logo 0.8s ease-in-out ${delay}s`;
         logoList[i].onanimationend = () => {
             logoList[i].style.opacity = '50%'
         }
@@ -54,9 +64,9 @@ function transitionList() {
 }
 
 function transitionEnter() {
-    delay = 0;
+    let delay = 0;
     for (let i = 0; i < mainContent.length; i++) {
-        mainContent[i].style.animation = 'appearBT 0.35s ease-in-out ' + delay + 's';
+        mainContent[i].style.animation = `appearBT 0.35s ease-in-out ${delay}s`;
         mainContent[i].onanimationend = () => {
             mainContent[i].style.opacity = '1'
         }
@@ -65,15 +75,15 @@ function transitionEnter() {
 
     setTimeout(function() {
         for (let i = 0; i < logoList.length; i++) {
-            logoList[i].setAttribute('onclick', 'changeMainContent(' + i + ')');
+            logoList[i].setAttribute('onclick', `changeMainContent(${i})`);
         }
     }, 1000)
 }
 
 function transitionQuit() {
-    delay = 0;
+    let delay = 0;
     for (let i = 0; i < mainContent.length; i++) {
-        mainContent[i].style.animation = 'disappearBT 0.35s ease-in-out ' + delay + 's';
+        mainContent[i].style.animation = `disappearBT 0.35s ease-in-out ${delay}s`;
         mainContent[i].onanimationend = () => {
             mainContent[i].style.opacity = '0'
         }
@@ -82,6 +92,17 @@ function transitionQuit() {
 
     for (let i = 0; i < logoList.length; i++) {
         logoList[i].setAttribute('onclick', '');
+    }
+}
+
+function ornamentIn() {
+    let delay = 1;
+    for(let i = 0; i < ornaments.length; i++) {
+        ornaments[i].style.animation = `ornamentsFadeIn 1s ease-in-out ${delay}s `
+        ornaments[i].onanimationend = () => {
+            ornaments[i].classList.remove("ornament")
+        }
+        delay += 0.25;
     }
 }
 

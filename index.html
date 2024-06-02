@@ -15,10 +15,10 @@
 
 <body class="py-3 d-flex flex-column justify-content-between">
     <div class="header-container d-flex w-100 justify-content-between fs-75 align-items-center">
-        <div>
+        <div class="ornament">
             <img src="/assets/logo-small.svg" class="img-logo-small">
         </div>
-        <div>
+        <div class="ornament">
             <span style="font-weight: 100">stylish</span><span style="font-weight: 600">minimalist</span>
         </div>
     </div>
@@ -65,14 +65,21 @@
         </div>
     </div>
     <div class="footer-container d-flex w-100 justify-content-between fs-75">
-        <div class="fw-reg" id="clock-small"></div>
-        <div class="text-end">Aditya Lila. 2024.</div>
+        <div class="fw-reg ornament" id="clock-small">
+            <div id="clockH"></div>
+            <div class="colon">:</div>
+            <div id="clockM"></div>
+            <div class="colon">:</div>
+            <div id="clockS" class="fw-bold"></div>
+        </div>
+        <div class="text-end ornament">Aditya Lila. <span class="fw-bold">2024.</span></div>
     </div>
 </body>
 
 <script>
     window.onload = function() {
         startTime();
+        ornamentIn();
         transitionEnter();
         transitionList();
         setTimeout(function() {

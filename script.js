@@ -1,11 +1,11 @@
 let pairContent = [
     ['twitter.com/', 'clawdius_', 'Twitter', 'This is the place where most of my sanity drains.', 'Visit My Twitter', 'https://twitter.com/clawdius_', 'blue'],
-    ['instagram.com/', 'clawdius_', 'Instagram', 'I rarely upload photos but I love to spam instastory.', 'Visit My Instagram', 'https://instagram.com/clawdius_', 'cyan'],
-    ['pinterest.com/', 'clawdius_', 'Pinterest', 'If others use Behance to post their digital portofolio, then i use Pinterest.', 'Visit My Pinterest', 'https://pinterest.com/clawdius_/my-finest-creation/', 'firebrick'],
+    ['instagram.com/', 'clawdius_', 'Instagram', 'I rarely upload photos but I love to spam instastory.', 'Visit My Instagram', 'https://instagram.com/clawdius_', 'orange'],
     ['steamcommunity.com/id/', 'clawdius_', 'Steam', 'From Rainbow Six: Siege to Stardew Valley, I enjoy wide variety of games.', 'Visit My Steam', 'https://steamcommunity.com/id/clawdius_', 'grey'],
-    ['github.com/', 'clawdius', 'Github', 'Thank you Github for hosting this static website for free.', 'Visit My Github', 'https://github.com/clawdius', 'black-grey'],
     ['facebook.com/', 'clawdiusunderscore', 'Facebook', "Who uses facebook these days? That's right, it's me.", 'Visit My Facebook', 'https://facebook.com/clawdiusunderscore', 'dodger-blue'],
+    ['pinterest.com/', 'clawdius_', 'Pinterest', 'If others use Behance to post their digital portofolio, then i use Pinterest.', 'Visit My Pinterest', 'https://pinterest.com/clawdius_/my-finest-creation/', 'firebrick'],
     ['youtube.com/', '@clawdius_', 'Youtube', 'I mostly upload my 3D animation contents here, instead of Pinterest.', 'Visit My Youtube', 'https://youtube.com/@clawdius_', 'red'],
+    ['github.com/', 'clawdius', 'Github', 'Thank you Github for hosting this static website for free.', 'Visit My Github', 'https://github.com/clawdius', 'black-grey'],
     ['mailto:', 'adityalilasaputra@gmail.com', 'Email', 'Have any question or something you want to say?', 'Mail Me', 'mailto:adityalilasaputra@gmail.com', 'purple']
 ]
 
@@ -111,14 +111,18 @@ function changeMainContent(index) {
     transitionQuit()
     setTimeout(function() {
         onanimationend = () => {
-            document.getElementById('text-link').innerText = pairContent[index][0]
-            document.getElementById('text-username').innerHTML = pairContent[index][1]
-            document.getElementById('media-name').innerHTML = pairContent[index][2]
-            document.getElementById('media-desc').innerHTML = pairContent[index][3]
-            document.getElementById('media-button').innerHTML = pairContent[index][4]
-            document.getElementById('media-link').href = pairContent[index][5]
+           setInnerContent(index)
         }
     }, 800)
     setTimeout(transitionEnter, 1000)
 
+}
+
+function setInnerContent(index) {
+    document.getElementById('text-link').innerText = pairContent[index][0]
+    document.getElementById('text-username').innerHTML = pairContent[index][1]
+    document.getElementById('media-name').innerHTML = pairContent[index][2]
+    document.getElementById('media-desc').innerHTML = pairContent[index][3]
+    document.getElementById('media-button').innerHTML = pairContent[index][4]
+    document.getElementById('media-link').href = pairContent[index][5]
 }

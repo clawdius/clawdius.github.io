@@ -31,19 +31,19 @@
                 <img src='/assets/ig-small.png' class="img-logo-list">
             </div>
             <div class="logo-list mx-2 my-1 d-flex" style="opacity: 0">
-                <img src='/assets/pinterest-small.png' class="img-logo-list">
-            </div>
-            <div class="logo-list mx-2 my-1 d-flex" style="opacity: 0">
                 <img src='/assets/steam-small.png' class="img-logo-list">
-            </div>
-            <div class="logo-list mx-2 my-1 d-flex" style="opacity: 0">
-                <img src='/assets/github-small.png' class="img-logo-list">
             </div>
             <div class="logo-list mx-2 my-1 d-flex" style="opacity: 0">
                 <img src='/assets/facebook-small.png' class="img-logo-list">
             </div>
             <div class="logo-list mx-2 my-1 d-flex" style="opacity: 0">
+                <img src='/assets/pinterest-small.png' class="img-logo-list">
+            </div>
+            <div class="logo-list mx-2 my-1 d-flex" style="opacity: 0">
                 <img src='/assets/youtube-small.png' class="img-logo-list">
+            </div>
+            <div class="logo-list mx-2 my-1 d-flex" style="opacity: 0">
+                <img src='/assets/github-small.png' class="img-logo-list">
             </div>
             <div class="logo-list mx-2 my-1 d-flex" style="opacity: 0">
                 <img src='/assets/mail-small.png' class="img-logo-list">
@@ -51,13 +51,12 @@
         </div>
         <div class="row align-items-center mb-5">
             <div class="d-flex flex-column col text-center" id="main-content">
-                <div class="fs-50" style="opacity: 0"><span style="opacity: 50%" id="text-link">twitter.com/</span><span class="fw-reg" id="text-username">clawdius_</span></div>
-                <div class="content-title fs-125" style="opacity: 0" id="media-name">Twitter</div>
-                <div class="content-desc fs-50" style="opacity: 0" id="media-desc">This is the place where most of my sanity drains.</div>
+                <div class="fs-50" style="opacity: 0"><span style="opacity: 50%" id="text-link"></span><span class="fw-reg" id="text-username"></span></div>
+                <div class="content-title fs-125" style="opacity: 0" id="media-name"></div>
+                <div class="content-desc fs-50" style="opacity: 0" id="media-desc"></div>
                 <div class="d-flex fs-50 mx-auto mt-4 justify-content-around" style="opacity: 0">
-                    <a href="https://twitter.com/clawdius_" id="media-link" target="_blank">
+                    <a href="" id="media-link" target="_blank">
                         <div class="content-button mx-1" id="media-button">
-                            Visit My Twitter
                         </div>
                     </a>
                 </div>
@@ -80,10 +79,14 @@
     window.onload = function() {
         startTime();
         ornamentIn();
+
+        setInnerContent(0);
+
         transitionEnter();
         transitionList();
+
         setTimeout(function() {
-            changeLogoState(0, 'blue')
+            changeLogoState(0)
         }, 1500)
     }
 </script>

@@ -111,6 +111,14 @@ body {
     color: var(--black);
 }
 
+a#media-link {
+    border-radius: 1.5em;
+}
+
+a#media-link:hover {
+    color: white;
+}
+
 .logo-list {
     border-radius: 12em;
     padding: 0.35em;

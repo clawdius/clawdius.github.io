@@ -8,7 +8,8 @@
   <link rel="stylesheet" media='screen' href="/style.css">
   <link rel="stylesheet" media='screen' href="/unfollowers/style.css">
   <script type="text/javascript" src="/unfollowers/script.js" defer></script>
-  <title>unfollowers</title>
+  <link rel="shortcut icon" type="image/x-icon" href="favico.ico">
+  <title>Unfollowers</title>
 </head>
 
 <body class="d-flex flex-column flex-lg-row flex justify-content-center align-items-center px-md-5">
@@ -17,32 +18,38 @@
       "Remove me from your followers, bruh"
     </div>
     <div>
-        <div class="mb-2 w-100">
-            <label for="following" class="custom-file-input w-100 d-flex justify-content-center">
-              Insert the <span class="fw-bold ms-1">following.json</span>
-            </label>
-            <input class="w-100 py-1" type="file" accept=".json" name="following" id="following">
-          </div>
-          <div class="mb-5 w-100">
-            <label for="followers" class="custom-file-input w-100 d-flex justify-content-center">
-              Insert the <span class="fw-bold ms-1">followers.json</span>
-            </label>
-            <input class="w-100 py-1" type="file" accept=".json" name="followers" id="followers">
-          </div>
-          <div class="w-100">
-            <button class="w-100 " id="compare">Compare</button>
-          </div>
+      <div class="mb-2 w-100" id="followingContainer">
+        <label for="following" class="custom-file-input w-100 d-flex justify-content-center">
+          Insert the <span class="fw-bold ms-1">following.json</span>
+        </label>
+        <input class="w-100 py-1" type="file" accept=".json" name="following" id="following">
+      </div>
+      <div class="mb-5 w-100" id="followersContainer">
+        <label for="followers" class="custom-file-input w-100 d-flex justify-content-center">
+          Insert the <span class="fw-bold ms-1">followers.json</span>
+        </label>
+        <input class="w-100 py-1" type="file" accept=".json" name="followers" id="followers">
+      </div>
+      <div class="w-100">
+        <button class="w-100 " id="compare">Compare</button>
+      </div>
     </div>
   </div>
   <div class="col-12 col-md-10 px-3 py-3 d-none" id="result-container">
     <div class="d-flex container flex-wrap overflow-scroll p-3" id="result">
     </div>
   </div>
-  <div class="col-12 col-md-10 px-3 py-3" id="result-container-placeholder">
+  <div class="col-12 col-md-10 px-3 py-3 d-none d-md-block" id="result-container-placeholder">
     <div class="d-flex justify-content-center align-items-center p-3" id="result-placeholder">
-        <div class="fs-2 opacity-25"> Insert the data first :)</div>
+      <div class="fs-2 opacity-25"> Insert the data first :)</div>
     </div>
   </div>
 </body>
 
 </html>
+
+<script>
+  window.onload = () => {
+    firstEnter()
+  }
+</script>

@@ -1,12 +1,16 @@
+const following = document.querySelector("input[name='following']");
+const followers = document.querySelector("input[name='followers']");
+
+const followingC = document.querySelector("div#followingContainer");
+const followersC = document.querySelector("div#followersContainer");
+const buttonCompare = document.querySelector("button#compare");
+const resultDiv = document.querySelector("div#result");
+const title = document.querySelector("div#title");
+
+const resultC = document.querySelector("div#result-container");
+const resultCP = document.querySelector("div#result-container-placeholder");
+
 (() => {
-  const following = document.querySelector("input[name='following']");
-  const followers = document.querySelector("input[name='followers']");
-  const buttonCompare = document.querySelector("button#compare");
-  const resultDiv = document.querySelector("div#result");
-
-  const resultC = document.querySelector("div#result-container");
-  const resultCP = document.querySelector("div#result-container-placeholder");
-
   // Reader helper
   const reader = (fileInput) => {
     return new Promise((resolve) => {
@@ -61,8 +65,11 @@
     if (result) {
       resultDiv.innerHTML = "";
 
-      resultCP.classList.add('d-none');
-      resultC.classList.remove('d-none');
+      resultCP.classList.remove("d-md-block");
+      resultCP.classList.add("d-none");
+
+      resultC.classList.remove("d-none");
+      resultC.classList.add("d-md-block");
 
       let c = 1;
       let rc = 0;
@@ -86,6 +93,24 @@
         }
       });
     }
-
   });
 })();
+
+function firstEnter() {
+  let delay = 0;
+  let appearList = [title, followingC, followersC, buttonCompare, resultCP];
+
+  title.style.opacity = "0";
+  followingC.style.opacity = "0";
+  followersC.style.opacity = "0";
+  buttonCompare.style.opacity = "0";
+  resultCP.style.opacity = "0";
+
+  for (const d of appearList) {
+    d.style.animation = `appearBT 0.35s ease-in-out ${delay}s`;
+    d.onanimationend = () => {
+      d.style.opacity = "1";
+    };
+    delay += 0.25;
+  }
+}

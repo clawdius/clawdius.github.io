@@ -10,6 +10,13 @@ const title = document.querySelector("div#title");
 const resultC = document.querySelector("div#result-container");
 const resultCP = document.querySelector("div#result-container-placeholder");
 
+// Hide elements at start
+title.style.opacity = "0";
+followingC.style.opacity = "0";
+followersC.style.opacity = "0";
+buttonCompare.style.opacity = "0";
+resultCP.style.opacity = "0";
+
 (() => {
   // Reader helper
   const reader = (fileInput) => {
@@ -99,12 +106,6 @@ const resultCP = document.querySelector("div#result-container-placeholder");
 function firstEnter() {
   let delay = 0;
   let appearList = [title, followingC, followersC, buttonCompare, resultCP];
-
-  title.style.opacity = "0";
-  followingC.style.opacity = "0";
-  followersC.style.opacity = "0";
-  buttonCompare.style.opacity = "0";
-  resultCP.style.opacity = "0";
 
   for (const d of appearList) {
     d.style.animation = `appearBT 0.35s ease-in-out ${delay}s`;

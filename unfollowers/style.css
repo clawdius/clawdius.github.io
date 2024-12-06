@@ -36,7 +36,11 @@ div#title {
     font-family: "Aboreto";
 }
 
-button#compare {
+button#compare,
+div#followersContainer,
+div#followingContainer,
+div#result-container-placeholder,
+div#title {
     opacity: 0;
 }
 

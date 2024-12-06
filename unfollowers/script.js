@@ -12,13 +12,6 @@ const resultCP = document.querySelector("div#result-container-placeholder");
 
 const overlay = document.querySelector("div#overlay");
 
-// Hide elements at start
-title.style.opacity = "0";
-followingC.style.opacity = "0";
-followersC.style.opacity = "0";
-buttonCompare.style.opacity = "0";
-resultCP.style.opacity = "0";
-
 (() => {
     // Reader helper
     const reader = (fileInput) => {

@@ -35,6 +35,10 @@ div#title {
     font-family: 'Aboreto';
 }
 
+button#compare {
+    opacity: 0;
+}
+
 div#result, div#result-placeholder {
     height: 90vh;
     border: solid 1px var(--white);

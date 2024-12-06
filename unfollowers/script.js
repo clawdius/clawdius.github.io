@@ -106,7 +106,7 @@ resultCP.style.opacity = "0";
 })();
 
 function firstEnter() {
-  let delay = 0;
+  let delay = 0.1;
   let appearList = [title, followingC, followersC, buttonCompare, resultCP];
 
   for (const d of appearList) {
@@ -114,6 +114,6 @@ function firstEnter() {
     d.onanimationend = () => {
       d.style.opacity = "1";
     };
-    delay += 0.25;
+    delay += 0.2;
   }
 }

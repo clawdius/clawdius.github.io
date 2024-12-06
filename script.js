@@ -15,6 +15,8 @@ let ornaments = document.querySelectorAll(".ornament");
 let clockH = document.getElementById('clockH');
 let clockM = document.getElementById('clockM');
 let clockS = document.getElementById('clockS');
+let signature = document.getElementById('signature');
+let overlay = document.getElementById('overlay');
 
 function startTime() {
     const today = new Date();
@@ -125,4 +127,13 @@ function setInnerContent(index) {
     document.getElementById('media-desc').innerHTML = pairContent[index][3]
     document.getElementById('media-button').innerHTML = pairContent[index][4]
     document.getElementById('media-link').href = pairContent[index][5]
+}
+
+function setSignature() {
+    let name = ""
+
+    // Funsies Easter Egg
+    name = Math.random() > 0.75 ? "Pemuja Karina" : "Aditya Lila";
+    
+    signature.innerHTML = `${name}. <span class="fw-bold">${new Date().getFullYear()}</span>`
 }

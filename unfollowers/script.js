@@ -10,6 +10,8 @@ const title = document.querySelector("div#title");
 const resultC = document.querySelector("div#result-container");
 const resultCP = document.querySelector("div#result-container-placeholder");
 
+const overlay = document.querySelector("div#overlay");
+
 // Hide elements at start
 title.style.opacity = "0";
 followingC.style.opacity = "0";

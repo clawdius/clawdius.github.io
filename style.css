@@ -140,6 +140,15 @@ a#media-link:hover {
     opacity: 0
 }
 
+div.overlay {
+    background: var(--black);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 10;
+}
+
+
 /* Image & Picture  */
 
 .img-logo-small {

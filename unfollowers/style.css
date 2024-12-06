@@ -7,7 +7,7 @@ button {
     transition: all 0.2s;
 }
 
-input[type='file'] {
+input[type="file"] {
     display: none;
 }
 
@@ -19,7 +19,8 @@ input[type='file'] {
     transition: all 0.2s;
 }
 
-.custom-file-input:hover, button:hover {
+.custom-file-input:hover,
+button:hover {
     background: var(--white);
     color: var(--black);
 }
@@ -32,14 +33,15 @@ div#sidebar {
     height: 90vh;
 }
 div#title {
-    font-family: 'Aboreto';
+    font-family: "Aboreto";
 }
 
 button#compare {
     opacity: 0;
 }
 
-div#result, div#result-placeholder {
+div#result,
+div#result-placeholder {
     height: 90vh;
     border: solid 1px var(--white);
     border-radius: 4px;
@@ -48,4 +50,3 @@ div#result, div#result-placeholder {
 .result-content {
     padding: 12px;
 }
-

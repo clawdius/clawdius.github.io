@@ -1,6 +1,6 @@
 /* Fonts */
 
-@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&display=swap");
 
 /* Colors */
 
@@ -17,7 +17,6 @@
     --firebrick: #b22222;
 }
 
-
 /* Font */
 
 .fs-200 {
@@ -29,7 +28,7 @@
 }
 
 .fs-150 {
-    font-size: 1.50em;
+    font-size: 1.5em;
 }
 
 .fs-125 {
@@ -60,7 +59,6 @@
     font-weight: 200;
 }
 
-
 /* Default */
 
 html {
@@ -87,14 +85,13 @@ body {
     width: 100vw;
     min-height: 100vh;
     background-color: var(--black);
-    color: var(--white)
+    color: var(--white);
 }
-
 
 /* Custom Class */
 
 .content-title {
-    font-family: 'Aboreto';
+    font-family: "Aboreto";
 }
 
 .content-button {
@@ -137,17 +134,16 @@ a#media-link:hover {
 }
 
 .ornament {
-    opacity: 0
+    opacity: 0;
 }
 
 div.overlay {
-    background: var(--black);
+    background: var;
     width: 100vw;
     height: 100vh;
     position: fixed;
     z-index: 10;
 }
-
 
 /* Image & Picture  */
 
@@ -160,7 +156,6 @@ div.overlay {
 .img-logo-list {
     height: 0.75em;
 }
-
 
 /* Animation */
 
@@ -176,54 +171,55 @@ div.overlay {
 @keyframes appearBT {
     0% {
         opacity: 0;
-        transform: translateY(0.1em)
+        transform: translateY(0.1em);
     }
     100% {
         opacity: 1;
-        transform: translateY(0)
+        transform: translateY(0);
     }
 }
 
 @keyframes appearBT-logo {
     0% {
         opacity: 0%;
-        transform: translateY(2em)
+        transform: translateY(2em);
     }
     100% {
         opacity: 50%;
-        transform: translateY(0)
+        transform: translateY(0);
     }
 }
 
 @keyframes disappearBT {
     0% {
         opacity: 1;
-        transform: translateY(0)
+        transform: translateY(0);
     }
     100% {
         opacity: 0;
-        transform: translateY(-0.1em)
-    } 
+        transform: translateY(-0.1em);
+    }
 }
 
 @keyframes ornamentsFadeIn {
     0% {
-        opacity: 0
+        opacity: 0;
     }
     100% {
-        opacity: 1
+        opacity: 1;
     }
 }
 
-
 /* Media adjust for header and footer */
 
-.header-container, .footer-container {
+.header-container,
+.footer-container {
     padding: 1em 3em;
 }
 
 @media screen and (max-width: 760px) {
-    .header-container, .footer-container {
+    .header-container,
+    .footer-container {
         padding: 0 1.5em;
     }
 }

@@ -6,7 +6,7 @@ let pairContent = [
     ["pinterest.com/", "clawdius_", "Pinterest", "If others use Behance to post their digital portofolio, then i use Pinterest.", "Visit My Pinterest", "https://pinterest.com/clawdius_/my-finest-creation/", "firebrick"],
     ["youtube.com/", "@clawdius_", "Youtube", "I mostly upload my 3D animation contents here, instead of Pinterest.", "Visit My Youtube", "https://youtube.com/@clawdius_", "red"],
     ["github.com/", "clawdius", "Github", "Thank you Github for hosting this static website for free.", "Visit My Github", "https://github.com/clawdius", "black-grey"],
-    ["mailto:", "adit@thecode.id", "Email", "Have any question or something you want to say?", "Mail Me", "mailto:adit@thecode.id", "purple"],
+    ["mailto:", "adityalilasaputra@gmail.com", "Email", "Have any question or something you want to say?", "Mail Me", "mailto:adityalilasaputra@gmail.com", "purple"],
 ];
 
 let mainContent = document.getElementById("main-content").children;

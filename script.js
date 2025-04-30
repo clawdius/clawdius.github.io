@@ -1,11 +1,11 @@
 let pairContent = [
+    ["github.com/", "clawdius", "Github", "Thank you Github for hosting this static website for free.", "Visit My Github", "https://github.com/clawdius", "black-grey"],
     ["twitter.com/", "clawdius_", "Twitter", "This is the place where most of my sanity drains.", "Visit My Twitter", "https://twitter.com/clawdius_", "blue"],
     ["instagram.com/", "clawdius_", "Instagram", "I rarely upload photos but I love to spam instastory.", "Visit My Instagram", "https://instagram.com/clawdius_", "orange"],
     ["steamcommunity.com/id/", "clawdius_", "Steam", "From Rainbow Six: Siege to Stardew Valley, I enjoy wide variety of games.", "Visit My Steam", "https://steamcommunity.com/id/clawdius_", "grey"],
     ["facebook.com/", "clawdiusunderscore", "Facebook", "Who uses facebook these days? That's right, it's me.", "Visit My Facebook", "https://facebook.com/clawdiusunderscore", "dodger-blue"],
     ["pinterest.com/", "clawdius_", "Pinterest", "If others use Behance to post their digital portofolio, then i use Pinterest.", "Visit My Pinterest", "https://pinterest.com/clawdius_/my-finest-creation/", "firebrick"],
     ["youtube.com/", "@clawdius_", "Youtube", "I mostly upload my 3D animation contents here, instead of Pinterest.", "Visit My Youtube", "https://youtube.com/@clawdius_", "red"],
-    ["github.com/", "clawdius", "Github", "Thank you Github for hosting this static website for free.", "Visit My Github", "https://github.com/clawdius", "black-grey"],
     ["mailto:", "adityalilasaputra@gmail.com", "Email", "Have any question or something you want to say?", "Mail Me", "mailto:adityalilasaputra@gmail.com", "purple"],
 ];
 
@@ -132,7 +132,7 @@ function setSignature() {
     let name = "";
 
     // Funsies Easter Egg
-    name = Math.random() > 0.75 ? "Pemuja Karina" : "Aditya Lila";
+    name = Math.random() > 0.75 ? "Pemuja Karina Aespa" : "Aditya Lila";
 
     signature.innerHTML = `${name}. <span class="fw-bold">${new Date().getFullYear()}</span>`;
 }

@@ -76,7 +76,7 @@ body {
 
 .gold {
     box-shadow: 0 4px rgb(254, 219, 18);
-    filter: drop-shadow(0 0 0.5em rgba(254, 219, 18, 0.75));
+    filter: drop-shadow(0 0 0.5em rgba(254, 219, 18, 0.395));
 }
 
 #pw-container {
@@ -100,4 +100,17 @@ input:focus {
 #img-container,
 #pw-container {
     transform: translateY(-50px);
+}
+
+#loading {
+    animation: rotate 2s infinite linear;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }

@@ -1,3 +1,6 @@
+// Dirtiest code I've ever written, holy moly I'm getting stroke writing this code.
+// "It just works" -Todd Howard.
+
 const caseConts = document.querySelector("#case-container");
 const caseWrap = document.querySelector("#container-wrapper");
 const baseOffset = -4870;
@@ -5,12 +8,22 @@ const baseOffset = -4870;
 const overlay = document.querySelector("#gamble-overlay");
 const pw = document.querySelector("#pw");
 
+const gambleButton = document.querySelector("#gambleButton");
+
 // Bypass pesky "change" event for pw field because we add it via JS
 const pwChange = new Event("change");
 
 const innerCase = (r, c) => {
     return `
         <div class="${r} inner m-1">${c}</div>
+    `;
+};
+
+const waitIcon = () => {
+    return `
+    <span class="material-symbols-outlined" id="loading">
+        refresh
+    </span>
     `;
 };
 
@@ -27,7 +40,7 @@ function generate(val) {
     for (let i = 0; i < val; i++) {
         r = Math.random();
 
-        // "Source?"
+        // "Source for the probability?"
         // https://csgoskins.gg/blog/csgo-case-odds-the-official-numbers-published-by-valve
 
         if (r < 0.0026) {
@@ -69,8 +82,15 @@ function generate(val) {
 }
 
 function open() {
+    // The truth is, it's ALWAYS the index number 57, sad truth, but it's true since I'm garbage at coding.
+    // Can actually be randomed by modifying end transform location, but hey, I'm too lazy for this fun project.
+    // 1536 points to div index 57 at the middle. Added a bit of randomness via `xOffset`.
+    // `wOffset` is here to adjust the width difference, so it will always points to index number 57 at the middle.
+
     const sNormal = new Audio("media/case normal.mp3");
     const sGold = new Audio("media/case gold.mp3");
+
+    gambleButton.innerHTML = waitIcon();
 
     sNormal.oncanplay = () => {
         overlay.classList.remove("hidden");
@@ -97,9 +117,6 @@ function open() {
             easing: "ease-out",
         });
 
-        // Trust me, the base index is ALWAYS 57 on normal occassion
-        // and persistent across different width
-
         if (g[57].r === "gold") {
             sGold.play();
         } else {
@@ -110,6 +127,7 @@ function open() {
             caseConts.style.transform = `translateX(${baseOffset + wOffset + xOffset}px)`;
             setTimeout(() => {
                 overlay.animate([{ opacity: 1 }, { opacity: 0 }], 200).onfinish = () => {
+                    gambleButton.innerText = "Open Character";
                     overlay.classList.add("hidden");
                     pw.dispatchEvent(pwChange);
                 };
@@ -132,7 +150,7 @@ window.onload = () => {
             navigator.clipboard.writeText(pw.value);
             alert("Copied to clipboard!");
         } else {
-            alert("You haven't gambled yet")
+            alert("You haven't gambled yet");
         }
     });
 

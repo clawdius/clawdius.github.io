@@ -29,7 +29,7 @@ body {
 }
 
 #gamble-overlay {
-    background-color: rgba(0, 0, 0, 0.46);
+    background-color: rgba(0, 0, 0, 0.668);
 }
 
 #cursor {
@@ -50,31 +50,33 @@ body {
     background-color: rgb(35, 35, 35);
     color: white;
     user-select: none;
+    position: relative;
+    z-index: 15;
 }
 
 .blue {
     box-shadow: 0 4px rgb(57, 57, 209);
-    filter: drop-shadow(0 0 0.5em rgb(57, 57, 209));
+    filter: drop-shadow(0 0 0.5em rgba(57, 57, 209, 0.395));
 }
 
 .purple {
     box-shadow: 0 4px rgb(133, 15, 133);
-    filter: drop-shadow(0 0 0.5em rgb(133, 15, 133));
+    filter: drop-shadow(0 0 0.5em rgb(133, 15, 133, 0.395));
 }
 
 .pink {
     box-shadow: 0 4px rgb(216, 67, 146);
-    filter: drop-shadow(0 0 0.5em rgb(216, 67, 146));
+    filter: drop-shadow(0 0 0.5em rgb(216, 67, 146, 0.395));
 }
 
 .red {
     box-shadow: 0 4px rgb(209, 36, 36);
-    filter: drop-shadow(0 0 0.5em rgb(209, 36, 36));
+    filter: drop-shadow(0 0 0.5em rgb(209, 36, 36, 0.395));
 }
 
 .gold {
     box-shadow: 0 4px rgb(254, 219, 18);
-    filter: drop-shadow(0 0 1em rgba(254, 219, 18));
+    filter: drop-shadow(0 0 0.5em rgba(254, 219, 18, 0.75));
 }
 
 #pw-container {

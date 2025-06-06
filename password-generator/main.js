@@ -27,6 +27,9 @@ function generate(val) {
     for (let i = 0; i < val; i++) {
         r = Math.random();
 
+        // "Source?"
+        // https://csgoskins.gg/blog/csgo-case-odds-the-official-numbers-published-by-valve
+
         if (r < 0.0026) {
             e.push({
                 r: "gold",
@@ -94,6 +97,9 @@ function open() {
             easing: "ease-out",
         });
 
+        // Trust me, the base index is ALWAYS 57 on normal occassion
+        // and persistent across different width
+
         if (g[57].r === "gold") {
             sGold.play();
         } else {
@@ -126,7 +132,7 @@ window.onload = () => {
             navigator.clipboard.writeText(pw.value);
             alert("Copied to clipboard!");
         } else {
-            alert("You haven't gamble yet")
+            alert("You haven't gambled yet")
         }
     });
 

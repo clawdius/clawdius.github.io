@@ -3,7 +3,7 @@
 
 const caseConts = document.querySelector("#case-container");
 const caseWrap = document.querySelector("#container-wrapper");
-const baseOffset = -4870;
+const baseOffset = -4870; // The "magic" number
 
 const overlay = document.querySelector("#gamble-overlay");
 const pw = document.querySelector("#pw");
@@ -84,8 +84,8 @@ function generate(val) {
 function open() {
     // The truth is, it's ALWAYS the index number 57, sad truth, but it's true since I'm garbage at coding.
     // Can actually be randomed by modifying end transform location, but hey, I'm too lazy for this fun project.
-    // 1536 points to div index 57 at the middle. Added a bit of randomness via `xOffset`.
-    // `wOffset` is here to adjust the width difference, so it will always points to index number 57 at the middle.
+    // 1536 pixels to div index 57 at the middle. Added a bit of randomness via `xOffset`.
+    // `wOffset` is here to adjust the device width difference, so it will always points to index number 57 at the middle.
 
     const sNormal = new Audio("media/case normal.mp3");
     const sGold = new Audio("media/case gold.mp3");
@@ -108,7 +108,14 @@ function open() {
             s += `${innerCase(j.r, j.c)} `;
         }
 
-        const xOffset = Math.floor(Math.random() * (40 + 40 + 1) - 40);
+        /* 
+        - Straight up stealing from StackOverflow for me in the future:
+            function randomInteger(min, max) {
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+        - In below case, the min-maxxing values are {-40, 40} pixels respectively
+        */
+        const xOffset = Math.floor(Math.random() * (40 + 40 + 1)) - 40;
         const wOffset = (caseWrap.clientWidth - 1536) / 2;
 
         caseConts.innerHTML = s;

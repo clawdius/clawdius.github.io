@@ -12,6 +12,7 @@
     --red: #ec3939;
     --grey: #414141;
     --black-grey: #202020;
+    --another-grey: #303030;
     --purple: #a962ec;
     --dodger-blue: #1e90ff;
     --firebrick: #b22222;
@@ -83,7 +84,7 @@ a {
 
 body {
     width: 100vw;
-    min-height: 100vh;
+    min-height: 100dvh;
     background-color: var(--black);
     color: var(--white);
 }

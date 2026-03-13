@@ -45,12 +45,12 @@ const overlay = document.querySelector("div#overlay");
         following.relationships_following.forEach((d) => {
             let dup = false;
             followers.forEach((e) => {
-                d.string_list_data[0].value == e.string_list_data[0].value ? (dup = true) : null;
+                d.title == e.string_list_data[0].value ? (dup = true) : null;
             });
             dup
                 ? null
                 : mismatch.push({
-                      name: d.string_list_data[0].value,
+                      name: d.title,
                       link: d.string_list_data[0].href,
                   });
         });
@@ -60,6 +60,8 @@ const overlay = document.querySelector("div#overlay");
 
     buttonCompare.addEventListener("click", async () => {
         const result = compare(await reader(following), await reader(followers));
+
+        console.log(result);
 
         if (result) {
             resultDiv.innerHTML = "";

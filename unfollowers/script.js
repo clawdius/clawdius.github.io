@@ -61,8 +61,6 @@ const overlay = document.querySelector("div#overlay");
     buttonCompare.addEventListener("click", async () => {
         const result = compare(await reader(following), await reader(followers));
 
-        console.log(result);
-
         if (result) {
             resultDiv.innerHTML = "";
 
